@@ -5,8 +5,8 @@
 // @description   Framework permettant les interactions avec le client natif 
 // @include       http://chat.developpez.com*
 // @version       2.0.0
-// @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.js
-// @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.js
+// @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
+// @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @website       http://dvp.io
 // @grant         GM_notification
 // @grant         GM_info
