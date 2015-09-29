@@ -2,9 +2,11 @@
 // @name          AnoCheat - DVP I/O
 // @author        Antoine 'Gecko' Pous <gecko@dvp.io>
 // @licence       LGPL v3
-// @description   Framework permettant les interactions avec le client natif 
+// @description   Framework permettant les interactions avec le client natif
 // @include       http://chat.developpez.com
+// @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
+// @include       http://46.105.99.98/
 // @version       2.0.0
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
