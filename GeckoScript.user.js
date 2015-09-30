@@ -7,14 +7,15 @@
 // @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
 // @include       http://46.105.99.98/
-// @version       2.0.0
+// @version       2.0.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
+// @grant         GM_info
 // @run-at        document-idle
 // ==/UserScript==
 
-if(AC_version !== '2.0.0') {
+if(AC_version !== '2.0.1') {
   alert("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
   throw new Error("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
 }
@@ -23,6 +24,9 @@ if(version !== '3.0.0') {
   alert("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
   throw new Error("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
 }
+
+// Ajout de l'entrée du log pour le chargement du script
+AC_logAdd('success',"GeckoScript v" + GM_info.script.version + " chargé");
 
 /* Réponse optimisée
  * Permet de répondre à un message en double cliquant dessus
