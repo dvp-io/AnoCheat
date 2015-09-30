@@ -7,7 +7,7 @@
 // @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
 // @include       http://46.105.99.98/
-// @version       2.0.1
+// @version       2.0.2
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
