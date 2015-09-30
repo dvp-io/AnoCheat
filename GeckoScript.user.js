@@ -7,7 +7,7 @@
 // @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
 // @include       http://46.105.99.98/
-// @version       2.0.3
+// @version       2.1.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -32,7 +32,7 @@ AC_logAdd('success',"GeckoScript v" + GM_info.script.version + " chargé");
  * Permet d'avoir un vrai mode mono sur le chat
  */
 
-AC_addStyle('.mono,.mono :not(.ui-dialog-titlebar-close):not(.fermeture):not(#quitterChat):not(.icone):not(#reduireListe){color:#000!important;background:#fff!important;text-shadow:none!important;box-shadow:0 0!important;border-color:#000!important}.mono * .ongletActivite{border-style:dotted!important}.mono * .ongletActivite table:first-child{font-style:italic!important}.mono * .ongletMessage{border-style:dashed!important}.mono * .ongletMessage table:first-child{text-decoration:underline!important}.mono * #quitterChat,.mono * #reduireListe,.mono * .fermeture,.mono * .icone,.mono * .ui-dialog-titlebar-close,.mono * img,.mono img{-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:gray;-webkit-filter:grayscale(100%)}.mono * .ColorPickerDivSample{display:none!important}');
+AC_addStyle('.mono,.mono :not(.ui-dialog-titlebar-close):not(.fermeture):not(#quitterChat):not(.icone):not(#reduireListe):not(#boutonMenuChat){color:#000!important;background:#fff!important;text-shadow:none!important;box-shadow:0 0!important;border-color:#000!important}.mono * .ongletActivite{border-style:dotted!important}.mono * .ongletActivite table:first-child{font-style:italic!important}.mono * .ongletMessage{border-style:dashed!important}.mono * .ongletMessage table:first-child{text-decoration:underline!important}.mono * #boutonMenuChat,.mono * #quitterChat,.mono * #reduireListe,.mono * .fermeture,.mono * .icone,.mono * .ui-dialog-titlebar-close,.mono * img,.mono img{-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:gray;-webkit-filter:grayscale(100%)}.mono * .ColorPickerDivSample{display:none!important}');
 AC_buttonAdd('Mono', function() {
 
   // Si le mode mono est actif  
