@@ -7,7 +7,7 @@
 // @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
 // @include       http://46.105.99.98/
-// @version       2.0.1
+// @version       2.0.2
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @website       http://dvp.io
@@ -146,6 +146,7 @@ AC_buttonAdd = function(name, callback) {
   button = document.createElement('input');
   button.type = 'button';
   button.value = name;
+  button.className = 'bouton';
   button.addEventListener('click', callback);
   toolBar.appendChild(button);
 }
