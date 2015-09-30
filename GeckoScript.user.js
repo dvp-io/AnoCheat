@@ -41,7 +41,7 @@ document.querySelector('#conversations').addEventListener('dblclick', function(e
       msg = e.target.parentElement.innerText != undefined ? e.target.parentElement.innerText : e.target.parentElement.textContent;
     
     // Si ctrl est pressé on cite le message
-    if(e.ctrlKey) {
+    if(e.ctrlKey || e.metaKey) {
       zs.value = zs.value + "[QUOTE]" + msg;
       focusZoneSaisie();
       return;
