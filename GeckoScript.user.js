@@ -7,7 +7,7 @@
 // @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
 // @include       http://46.105.99.98/
-// @version       2.2.0
+// @version       2.2.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -100,7 +100,6 @@ var dndTabs = function() {
     var cols_ = document.querySelectorAll('#barreOnglets .onglet'),
         dragSrcEl_ = null;
     this.handleDragStart = function (e) {
-      console.log(e);
       e.dataTransfer.effectAllowed = 'move';
       e.dataTransfer.setData('text/html', this.innerHTML);
       dragSrcEl_ = this;
@@ -140,7 +139,6 @@ var dndTabs = function() {
       });
     };
     [].forEach.call(cols_, function (col) {
-      console.log(col);
       col.setAttribute('draggable', 'true');
       col.addEventListener('dragstart', this.handleDragStart, false);
       col.addEventListener('dragenter', this.handleDragEnter, false);
