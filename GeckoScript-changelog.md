@@ -1,5 +1,17 @@
 #Changelog GeckoScript
 
+## 2.2.0
+
+Correctifs :
+
+- Prise en charge du menu dans les conversations par le mode mono (@Takka)
+- Prise en charge de l'autocomplétion, le pseudo sélectionné est souligné (@Takka)
+- Prise en charge des menus conversation et chat
+
+Fonctionalités :
+
+- Prise en charge du drag & drop pour les onglets de conversation
+
 ## 2.1.1
 
 Correctifs :
