@@ -10,4 +10,4 @@ Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vo
 ## Compatibilité
 - [x] Chrome
 - [ ] Firefox
-- [ ] Opera
+- [x] Opera
