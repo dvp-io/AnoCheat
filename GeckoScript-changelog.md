@@ -1,5 +1,11 @@
 #Changelog GeckoScript
 
+## 2.2.1
+
+Correctifs :
+
+- Supression des console.log
+
 ## 2.2.0
 
 Correctifs :
