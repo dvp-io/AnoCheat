@@ -1,5 +1,11 @@
 #Changelog GeckoScript
 
+## 2.2.2
+
+Correctifs :
+
+- Implémentation du Drag & drop de jQuery-UI
+
 ## 2.2.1
 
 Correctifs :
