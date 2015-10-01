@@ -7,7 +7,7 @@
 // @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
 // @include       http://46.105.99.98/
-// @version       2.2.1
+// @version       2.2.2
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -93,66 +93,10 @@ document.querySelector('#conversations').addEventListener('dblclick', function(e
  * Permet de réorganiser les onglets de conversation dans l'ordre qu'on souhaite
  */
 
-// Ajout du CSS pour prévenir de la selection du texte
-AC_addStyle('[draggable]{-moz-user-select:none;-khtml-user-select: none;-webkit-user-select:none;user-select:none;-khtml-user-drag:element;-webkit-user-drag:element;}');
-
-var dndTabs = function() {
-    var cols_ = document.querySelectorAll('#barreOnglets .onglet'),
-        dragSrcEl_ = null;
-    this.handleDragStart = function (e) {
-      e.dataTransfer.effectAllowed = 'move';
-      e.dataTransfer.setData('text/html', this.innerHTML);
-      dragSrcEl_ = this;
-      this.classList.add('moving');
-    };
-    this.handleDragOver = function (e) {
-      if (e.preventDefault) {
-        e.preventDefault();
-      }
-      e.dataTransfer.dropEffect = 'move';
-      return false;
-    };
-    this.handleDragEnter = function (e) {
-      this.classList.add('over');
-    };
-    this.handleDragLeave = function (e) {
-      this.classList.remove('over');
-    };
-    this.handleDrop = function (e) {
-      if (e.stopPropagation) {
-        e.stopPropagation();
-      }
-      if (dragSrcEl_ != this) {
-         dragSrcElClass = dragSrcEl_.className;
-         dragTargetClass = this.className;
-         dragSrcEl_.innerHTML = this.innerHTML;
-         this.innerHTML = e.dataTransfer.getData('text/html');
-         this.className = dragSrcElClass;
-         dragSrcEl_.className = dragTargetClass;
-      }
-      return false;
-    };
-    this.handleDragEnd = function (e) {
-      [].forEach.call(cols_, function (col) {
-        col.classList.remove('over');
-        col.classList.remove('moving');
-      });
-    };
-    [].forEach.call(cols_, function (col) {
-      col.setAttribute('draggable', 'true');
-      col.addEventListener('dragstart', this.handleDragStart, false);
-      col.addEventListener('dragenter', this.handleDragEnter, false);
-      col.addEventListener('dragover', this.handleDragOver, false);
-      col.addEventListener('dragleave', this.handleDragLeave, false);
-      col.addEventListener('drop', this.handleDrop, false);
-      col.addEventListener('dragend', this.handleDragEnd, false);
-    });
-}
-
 // On écoute la modification du DOM
 document.addEventListener("DOMSubtreeModified", function(ev) {
   // Si on est sur la création d'un onglet
   if(ev.srcElement.id == "barreOnglets") {
-    dndTabs();
+      $(".onglet:not(#onglet0)").draggable({addClasses: false, containment: "parent", axis:"x"});
   }
 }, false);
