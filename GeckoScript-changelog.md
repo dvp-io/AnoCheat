@@ -4,7 +4,7 @@
 
 Correctifs :
 
-- Supression des console.log
+- Suppression des console.log
 
 ## 2.2.0
 
