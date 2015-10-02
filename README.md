@@ -1,13 +1,45 @@
 # AnoCheat v2.x
 Le projet AnoCheat permet d'agrémenter l'AnoChat de nouvelles fonctionalités en se basant sur un Framework dédié.
 
+## Prérequis
+Avant toute chose vous devez installer un gestionnaire d'userscript.
+
+- [TamperMonkey pour Chromium/Chrome v29+](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
+- [TamperMonkey pour Opera Next v15+](https://addons.opera.com/en/extensions/details/tampermonkey-beta/?display=en)
+- [GreaseMonkey pour Firefox v38+](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/)
+- [TamperMonkey pour Safari v5+](https://safari.tampermonkey.net/tampermonkey.safariextz)
+- [TamperMonkey pour Dolphin (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin)
+- [TamperMonkey pour UC Browser (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.uc)
+
+## Compatibilité
+- [x] Chrome / Chromium
+- [x] Opera
+
+**Non testé, retours bienvenus**
+- [ ] Safari
+- [ ] Dolphin
+- [ ] UC Browser
+
+**Incompatible pour l'instant**
+- [ ] Firefox ([incompatibilité](https://github.com/dvp-io/AnoCheat/issues/1))
+
 ## Installation
 Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vous assurer de l'ordre d'execution.
 
-* [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
-* [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
+1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
+2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
 
-## Compatibilité
-- [x] Chrome
-- [ ] Firefox
-- [x] Opera
+## Bug et suggestions
+Vous pouvez soumettre les bugs trouvés et vos suggestions sur le [tracker du projet](https://github.com/dvp-io/AnoCheat/issues).
+En cas de bug vous devez préciser:
+- La version du script
+- Le navigateur utilisé et sa version
+- Le système d'exploitation et sa version
+- Le moyen de reproduire le bug
+
+**Dans tous les cas vérifiez que vous disposez bien de la dernière version AVANT de signaler un bug**
+
+## Changelog
+Vous pouvez voir les évolutions sur les changelogs. Les nouveautés du framework sont séparées du script.
+- [Changelog du script](./GeckoScript-changelog.md)
+- [Changelog du Framework](./AnoCheat-changelog.md)
