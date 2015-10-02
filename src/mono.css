@@ -1,0 +1,68 @@
+.mono, .mono :not(.ui-dialog-titlebar-close):not(.fermeture):not(#quitterChat):not(.icone):not(#reduireListe):not(#boutonMenuChat):not(.horodatage):not(.cocheInvisible) {
+  color: black !important;
+  background: white !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 !important;
+  border-color: black !important;
+}
+
+.mono * .ongletActivite {
+  border-style: dotted !important;
+}
+
+.mono * .ongletActivite table:first-child {
+  font-style: italic !important;
+}
+
+.mono * .ongletMessage {
+  border-style: dashed !important;
+}
+
+.mono * .ongletMessage table:first-child {
+  text-decoration: underline !important;
+}
+
+.mono img, .mono * img, .mono * .ui-dialog-titlebar-close, .mono * .fermeture, .mono * #boutonMenuChat, .mono * #quitterChat, .mono * #reduireListe, .mono * .icone, .mono * .horodatage {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+
+.mono * .ColorPickerDivSample {
+  display: none !important;
+} 
+
+.mono * .elementcomplsel {
+    text-decoration: underline;
+}
+
+.mono #menuConversation a:hover, .mono #menuChat a:hover, .mono #menuUtilisateur a:hover {
+    text-decoration: underline;
+    border-radius: initial;
+}
+
+.mono #menuConversation, .mono #menuChat, .mono #menuUtilisateur {
+  border: 1px black solid;
+}
+
+.mono #menuChat * span.cocheInvisible {
+  color: white;
+}
+
+.mono * .titreCadre {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.mono * .conversation {
+  border-top: 1px solid;
+}
+
+.mono * #barreStatut {
+    border-top: 1px solid;
+}
