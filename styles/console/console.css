@@ -1,0 +1,68 @@
+.console, .console :not(.ui-dialog-titlebar-close):not(.fermeture):not(#quitterChat):not(.icone):not(#reduireListe):not(#boutonMenuChat):not(.horodatage):not(.cocheInvisible) {
+  color: white !important;
+  background: black !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 !important;
+  border-color: white !important;
+}
+
+.console * .ongletActivite {
+  border-style: dotted !important;
+}
+
+.console * .ongletActivite table:first-child {
+  font-style: italic !important;
+}
+
+.console * .ongletMessage {
+  border-style: dashed !important;
+}
+
+.console * .ongletMessage table:first-child {
+  text-decoration: underline !important;
+}
+
+.console img, .console * img, .console * .ui-dialog-titlebar-close, .console * .fermeture, .console * #boutonMenuChat, .console * #quitterChat, .console * #reduireListe, .console * .icone, .console * .horodatage {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+
+.console * .ColorPickerDivSample {
+  display: none !important;
+}
+
+.console * .elementcomplsel {
+    text-decoration: underline;
+}
+
+.console #menuConversation a:hover, .console #menuChat a:hover, .console #menuUtilisateur a:hover {
+    text-decoration: underline;
+    border-radius: initial;
+}
+
+.console #menuConversation, .console #menuChat, .console #menuUtilisateur {
+  border: 1px white solid;
+}
+
+.console #menuChat * span.cocheInvisible {
+  color: black;
+}
+
+.console * .titreCadre {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.console * .conversation {
+  border-top: 1px solid;
+}
+
+.console * #barreStatut {
+    border-top: 1px solid;
+}
