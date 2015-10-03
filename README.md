@@ -6,14 +6,14 @@ Avant toute chose vous devez installer un gestionnaire d'userscript.
 
 - [TamperMonkey pour Chromium/Chrome v29+](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
 - [TamperMonkey pour Opera Next v15+](https://addons.opera.com/en/extensions/details/tampermonkey-beta/?display=en)
-- [GreaseMonkey pour Firefox v38+](https://addons.mozilla.org/fr/firefox/addon/greasemonkey/)
+- [TamperMonkey pour Firefox] ([indisponible actuellement](https://github.com/dvp-io/AnoCheat/issues/1))
 - [TamperMonkey pour Safari v5+](https://safari.tampermonkey.net/tampermonkey.safariextz)
 - [TamperMonkey pour Dolphin (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin)
 - [TamperMonkey pour UC Browser (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.uc)
 
 ## Compatibilité
 - [x] Chrome / Chromium
-- [x] Opera
+- [x] Opera Next
 
 **Non testé, retours bienvenus**
 - [ ] Safari
@@ -24,7 +24,7 @@ Avant toute chose vous devez installer un gestionnaire d'userscript.
 - [ ] Firefox ([incompatibilité](https://github.com/dvp-io/AnoCheat/issues/1))
 
 ## Installation
-Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vous assurer de l'ordre d'execution.
+Vous devez installer le framework ([AnoCheat](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)) AVANT le script ([GeckoScript](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)) et vous assurer de l'ordre d'execution.
 
 1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
 2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
@@ -38,6 +38,8 @@ En cas de bug vous devez préciser:
 - Le moyen de reproduire le bug
 
 **Dans tous les cas vérifiez que vous disposez bien de la dernière version AVANT de signaler un bug**
+
+- [Accéder au tracker](https://github.com/dvp-io/AnoCheat/issues)
 
 ## Changelog
 Vous pouvez voir les évolutions sur les changelogs. Les nouveautés du framework sont séparées du script.
