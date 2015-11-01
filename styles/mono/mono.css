@@ -4,6 +4,10 @@
   text-shadow:none!important;
 }
 
+.mono .saisieModo {
+  background-color: #ebf0f3;
+}
+
 .mono img,.mono .phrase,.mono #connectes a,.mono .ui-dialog-titlebar-close,.mono #boutonMenuChat,.mono #quitterChat,.mono #menuChat,.mono #menuUtilisateur,.mono #menuConversation,.mono #messageOriginal {
   -moz-filter:grayscale(100%);
   -ms-filter:grayscale(100%);
