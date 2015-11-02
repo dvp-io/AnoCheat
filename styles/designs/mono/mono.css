@@ -37,12 +37,12 @@
 }
 
 .monochrome * .elementcomplsel {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .monochrome #menuConversation a:hover, .monochrome #menuChat a:hover, .monochrome #menuUtilisateur a:hover {
-    text-decoration: underline;
-    border-radius: initial;
+  text-decoration: underline;
+  border-radius: initial;
 }
 
 .monochrome #menuConversation, .monochrome #menuChat, .monochrome #menuUtilisateur {
@@ -64,5 +64,5 @@
 }
 
 .monochrome * #barreStatut {
-    border-top: 1px solid;
+  border-top: 1px solid;
 }
