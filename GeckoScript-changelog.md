@@ -1,5 +1,17 @@
 #Changelog GeckoScript
 
+## 2.3.0
+
+Général :
+
+- Nouvelle version du Framework requise (2.1.0)
+- Nouvelle version du chat requise (3.0.1)
+
+Fonctionalités :
+
+- Implémentation de la méthode GS_styleAdd
+- Implémentation d'un sélecteur de design, concevez et publiez vos propre design pour l'AnoChat
+
 ## 2.2.2
 
 Correctifs :
