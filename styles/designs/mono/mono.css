@@ -1,0 +1,68 @@
+.monochrome, .monochrome :not(.ui-dialog-titlebar-close):not(.fermeture):not(#quitterChat):not(.icone):not(#reduireListe):not(#boutonMenuChat):not(.horodatage):not(.cocheInvisible) {
+  color: black !important;
+  background: white !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 !important;
+  border-color: black !important;
+}
+
+.monochrome * .ongletActivite {
+  border-style: dotted !important;
+}
+
+.monochrome * .ongletActivite table:first-child {
+  font-style: italic !important;
+}
+
+.monochrome * .ongletMessage {
+  border-style: dashed !important;
+}
+
+.monochrome * .ongletMessage table:first-child {
+  text-decoration: underline !important;
+}
+
+.monochrome img, .monochrome * img, .monochrome * .ui-dialog-titlebar-close, .monochrome * .fermeture, .monochrome * #boutonMenuChat, .monochrome * #quitterChat, .monochrome * #reduireListe, .monochrome * .icone, .monochrome * .horodatage {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+
+.monochrome * .ColorPickerDivSample {
+  display: none !important;
+}
+
+.monochrome * .elementcomplsel {
+    text-decoration: underline;
+}
+
+.monochrome #menuConversation a:hover, .monochrome #menuChat a:hover, .monochrome #menuUtilisateur a:hover {
+    text-decoration: underline;
+    border-radius: initial;
+}
+
+.monochrome #menuConversation, .monochrome #menuChat, .monochrome #menuUtilisateur {
+  border: 1px black solid;
+}
+
+.monochrome #menuChat * span.cocheInvisible {
+  color: white;
+}
+
+.monochrome * .titreCadre {
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.monochrome * .conversation {
+  border-top: 1px solid;
+}
+
+.monochrome * #barreStatut {
+    border-top: 1px solid;
+}
