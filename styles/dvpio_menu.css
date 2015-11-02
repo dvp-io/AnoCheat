@@ -1,0 +1,50 @@
+#dvpio_button,#dvpio_menu li img {
+  vertical-align: middle;
+}
+
+#dvpio_menu {
+  position: absolute;
+  bottom: 25px;
+  border: 1px solid #05679a;
+  margin: 0 0 7px;
+  text-align: left;
+  z-index: 1000;
+  border-radius: 3px;
+  padding: 5px;
+  width: auto;
+  background-color: #fff;
+}
+
+#dvpio_menu li {
+  list-style-type: none;
+  background-color: #fff;
+  width: 100%;
+  color: #05679a;
+  cursor: pointer;
+}
+
+#dvpio_menu li img {
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+}
+
+#dvpio_menu li:hover {
+  color: #E42420;
+}
+
+/*
+dvpio_menu li:hover:after {
+  content: attr(data-tooltip);
+  color: #000;
+  position: absolute;
+  left: 210px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 10pt;
+  border: 1px solid #475E8C;
+  border-radius: 3px;
+  padding: 3px;
+  background-color: #E1E1E2;
+  line-height: 23px;
+}*/
