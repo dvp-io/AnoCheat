@@ -1,0 +1,46 @@
+#dvpio_log,#dvpio_log div:not(:last-child) {
+  border-bottom: 1px solid #ACBFCB;
+}
+
+#dvpio_log {
+  position: absolute;
+  left: 0;
+  top: 37px;
+  width: 75%;
+  overflow: scroll;
+  overflow-x: hidden;
+  align: left;
+  padding: 2px 0;
+  border-right: 1px solid #ACBFCB;
+  background-color: snow;
+  height: 98px;
+}
+
+#dvpio_log div {
+  margin: 0;
+  line-height: 16px;
+}
+
+#dvpio_log div span {
+  padding-left: 20px;
+}
+
+#dvpio_log div.error span {
+  color: red;
+  background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/error.png) no-repeat;
+}
+
+#dvpio_log div.warning span {
+  color: orange;
+  background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/warn.png) no-repeat;
+}
+
+#dvpio_log div.notice span {
+  background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/info.png) no-repeat;
+  color: #0074cd;
+}
+
+#dvpio_log div.success span {
+  background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/success.png) no-repeat;
+  color: green;
+}
