@@ -1,5 +1,25 @@
 #Changelog AnoCheat
 
+## 2.1.0
+
+Général :
+
+- Nouvelle version du chat requise (3.0.1)
+
+Correctifs :
+
+- La méthode AC_addStyle est renommée AC_cssAdd
+- Le menu DVP I/O s'ouvre maintenant à la bonne place quelque soit la résolution
+- Le menu DVP I/O se ferme automatiquement quand le curseur sort du menu
+- Les logs sont désormais contenus dans des `div`
+
+Fonctionalités :
+
+- Implémentation de la méthode  AC_configWrite
+- Implémentation de la méthode AC_configRead
+- Ajout d'un menu pointant vers le tracker
+- Ajout d'un menu pointant vers le projet
+
 ## 2.0.2
 
 Correctifs :
