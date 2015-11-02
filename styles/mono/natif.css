@@ -1,0 +1,38 @@
+/* Mode MonoChrome
+ *
+ * Version native utilisée sur l'AnoChat v 3.0.1
+ */
+
+.mono input[type=button] {
+  color:#000!important;
+  background:#FFF!important;
+  text-shadow:none!important;
+}
+
+.mono img,.mono .phrase,.mono #connectes a,.mono .ui-dialog-titlebar-close,.mono #boutonMenuChat,.mono #quitterChat,.mono #menuChat,.mono #menuUtilisateur,.mono #menuConversation,.mono #messageOriginal {
+  -moz-filter:grayscale(100%);
+  -ms-filter:grayscale(100%);
+  -o-filter:grayscale(100%);
+  filter:gray;
+  -webkit-filter:grayscale(100%);
+}
+
+.mono .ui-dialog-titlebar {
+  background-color:#aaa!important;
+}
+
+.mono #ecranChat {
+  background:#FFF!important;
+}
+
+.mono #barreOnglets {
+  background-color:#888!important;
+}
+
+.mono #barreStatut {
+  background-color:#bababa!important;
+}
+
+.mono .ColorPickerDivSample {
+  display:none!important;
+}
