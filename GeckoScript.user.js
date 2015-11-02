@@ -7,7 +7,7 @@
 // @include       http://chat.developpez.com/
 // @include       http://46.105.99.98
 // @include       http://46.105.99.98/
-// @version       2.3.0
+// @version       2.3.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -85,10 +85,6 @@ document.querySelector('#conversations').addEventListener('dblclick', function(e
       return;
     }
 
-    // Sinon c'est une réponse au message
-    zs.value = "[@" + tid + "] " + zs.value;
-    focusZoneSaisie();
-    return;
   }
 });
 

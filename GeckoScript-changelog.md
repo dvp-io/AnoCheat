@@ -1,5 +1,11 @@
 #Changelog GeckoScript
 
+## 2.3.1
+
+Correctifs :
+
+- Suppression de la réponse au double-clic (natif depuis la 3.0.1)
+
 ## 2.3.0
 
 Général :
