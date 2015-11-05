@@ -1,5 +1,16 @@
 #Changelog GeckoScript
 
+## 2.3.2
+
+Fonctionalités :
+
+- Le combo ALT + Flèche du bas affiche/masque la zone de saisie
+- Le combo ALT + Flèche de droite affiche/masque la liste des membres
+
+Correctifs :
+
+- Mise à jour des IP et domaines valides
+
 ## 2.3.1
 
 Correctifs :

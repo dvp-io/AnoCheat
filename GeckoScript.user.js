@@ -5,9 +5,13 @@
 // @description   Script ajoutant des fonctionalités à l'AnoChat, nécessite l'AnoCheat pour fonctionner
 // @include       http://chat.developpez.com
 // @include       http://chat.developpez.com/
-// @include       http://46.105.99.98
-// @include       http://46.105.99.98/
-// @version       2.3.1
+// @include       http://87.98.168.209
+// @include       http://87.98.168.209/
+// @include       http://149.202.80.151
+// @include       http://149.202.80.151/
+// @include       http://chat.dvp.io
+// @include       http://chat.dvp.io/
+// @version       2.3.2
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -15,7 +19,7 @@
 // @run-at        document-idle
 // ==/UserScript==
 
-if(AC_version !== '2.1.0') {
+if(AC_version !== '2.1.1') {
   alert("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
   throw new Error("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
 }
@@ -99,3 +103,22 @@ document.addEventListener("DOMSubtreeModified", function(ev) {
   }
 
 }, false);
+
+// Binds
+document.addEventListener('keydown', function(e) {
+  var charCode = e.which || e.keyCode;
+
+  if(e.altKey) {
+
+    if(charCode === 40) {
+      if($('#zoneSaisie').is(':visible')) { masquerBas(); } else { afficherBas(); }
+    }
+
+    if(charCode === 39) {
+      if($('#connectes').is(':visible')) { masquerDroite(); } else { afficherDroite(); }
+    }
+
+  }
+
+});
+
