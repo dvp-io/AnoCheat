@@ -5,9 +5,13 @@
 // @description   Framework permettant les interactions avec le client natif
 // @include       http://chat.developpez.com
 // @include       http://chat.developpez.com/
-// @include       http://46.105.99.98
-// @include       http://46.105.99.98/
-// @version       2.1.0
+// @include       http://chat.dvp.io
+// @include       http://chat.dvp.io/
+// @include       http://87.98.168.209
+// @include       http://87.98.168.209/
+// @include       http://149.202.80.151
+// @include       http://149.202.80.151/
+// @version       2.1.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @website       http://dvp.io

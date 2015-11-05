@@ -1,4 +1,10 @@
-#Changelog AnoCheat
+# Changelog AnoCheat
+
+## 2.1.1
+
+Correctifs :
+
+- Mise à jour des url prises en charge
 
 ## 2.1.0
 
