@@ -13,7 +13,7 @@ Fonctionalités :
 
 Correctifs :
 
-- Mise à jour des IP et domaines valides
+- Mise à jour des url prises en charge
 
 ## 2.3.1
 
