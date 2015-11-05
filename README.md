@@ -45,3 +45,10 @@ En cas de bug vous devez préciser:
 Vous pouvez voir les évolutions sur les changelogs. Les nouveautés du framework sont séparées du script.
 - [Changelog du script](./GeckoScript-changelog.md)
 - [Changelog du Framework](./AnoCheat-changelog.md)
+
+## Accessibilité
+Certains d'entre vous rencontrent des problèmes pour se connecter depuis leur poste de travail. Afin de palier à ce problème une liste d'IP et noms de domaine est disponible pour accéder au chat :
+- [http://chat.developpez.com](http://chat.developpez.com)
+- [http://chat.dvp.io](http://chat.dvp.io)
+- [http://87.98.168.209](http://87.98.168.209)
+- [http://149.202.80.151](http://149.202.80.151)
