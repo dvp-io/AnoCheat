@@ -2,6 +2,10 @@
 
 ## 2.3.2
 
+Général :
+
+- Nouvelle version du Framework requise (2.1.1)
+
 Fonctionalités :
 
 - Le combo ALT + Flèche du bas affiche/masque la zone de saisie
