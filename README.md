@@ -1,6 +1,17 @@
 # AnoCheat v2.x
 Le projet AnoCheat permet d'agrémenter l'AnoChat de nouvelles fonctionalités en se basant sur un Framework dédié.
 
+**Table des matières :**
+
+- [Prérequis](https://github.com/dvp-io/AnoCheat#prérequis)
+- [Compatibilité](https://github.com/dvp-io/AnoCheat#compatibilité)
+- [Installation](https://github.com/dvp-io/AnoCheat#installation)
+- [Bugs & Suggestions](https://github.com/dvp-io/AnoCheat#bugs-et-suggestions)
+- [Changelogs](https://github.com/dvp-io/AnoCheat#changelogs)
+- [Accessibilité](https://github.com/dvp-io/AnoCheat#accessibilité)
+- [Fonctionalités](https://github.com/dvp-io/AnoCheat#fonctionalités)
+- [Fonctionalités retirées](https://github.com/dvp-io/AnoCheat#fonctionalités-retirées)
+
 ## Prérequis
 Avant toute chose vous devez installer un gestionnaire d'userscript.
 
@@ -34,7 +45,7 @@ Scriptish (Firefox) :
 1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat-FF.user.js)
 2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript-FF.user.js)
 
-## Bug et suggestions
+## Bugs et suggestions
 Vous pouvez soumettre les bugs trouvés et vos suggestions sur le [tracker du projet](https://github.com/dvp-io/AnoCheat/issues).
 En cas de bug vous devez préciser:
 - La version du script
@@ -46,7 +57,7 @@ En cas de bug vous devez préciser:
 
 - [Accéder au tracker](https://github.com/dvp-io/AnoCheat/issues)
 
-## Changelog
+## Changelogs
 Vous pouvez voir les évolutions sur les changelogs. Les nouveautés du framework sont séparées du script.
 - [Changelog du script](./GeckoScript-changelog.md)
 - [Changelog du Framework](./AnoCheat-changelog.md)
