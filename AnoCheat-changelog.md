@@ -2,6 +2,12 @@
 
 ## 2.1.2
 
+Général :
+
+- Le Framework est désormais disponible pour Firefox
+
+## 2.1.2
+
 Fonctionalités :
 
 - AC_buttonAdd prend maintenant un troisième paramètre optionnel sous forme d'objet `{after|before:'inputID'}`
