@@ -1,5 +1,11 @@
 # Changelog AnoCheat
 
+## 2.1.2
+
+Fonctionalités :
+
+- AC_buttonAdd prend maintenant un troisième paramètre optionnel sous forme d'objet `{after|before:'inputID'}`
+
 ## 2.1.1
 
 Correctifs :

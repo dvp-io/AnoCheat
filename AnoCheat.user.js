@@ -11,7 +11,7 @@
 // @include       http://87.98.168.209/
 // @include       http://149.202.80.151
 // @include       http://149.202.80.151/
-// @version       2.1.1
+// @version       2.1.2
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @website       http://dvp.io
@@ -159,14 +159,27 @@ if(LStorage) {
 /* Ajoute un bouton
  * @param name string Nom du menu
  * @param callback function Callback appelé au clic sur le bouton
+ * @param after string Id du bouton précédant le nouveau bouton
  */
-AC_buttonAdd = function(name, callback) {
+AC_buttonAdd = function(name, callback, opt) {
   button = document.createElement('input');
   button.type = 'button';
   button.value = name;
   button.className = 'bouton';
   button.addEventListener('click', callback);
-  toolBar.appendChild(button);
+  if(typeof opt === "object") {
+    if(typeof opt.after === "string") {
+      var el = document.getElementById(opt.after);
+      el.parentNode.insertBefore(button, el.nextSibling);
+      el.parentNode.insertBefore(document.createTextNode("\n"), el.nextSibling);
+    } else {
+      var el = document.getElementById(opt.before);
+      el.parentNode.insertBefore(button, el);
+      el.parentNode.insertBefore(document.createTextNode("\n"), el);
+    }
+  } else {
+    toolBar.appendChild(button);
+  }
 };
 
 // Création du bouton (image)
