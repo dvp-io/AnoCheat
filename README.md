@@ -24,12 +24,12 @@ Avant toute chose vous devez installer un gestionnaire d'userscript.
 ## Installation
 **NOTE: Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vous assurer de l'ordre d'execution.**
 
-Chrome :
+TamperMonkey (Chromium, Chrome, Opera, Safari, ...) :
 
 1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
 2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
 
-Firefox :
+Scriptish (Firefox) :
 
 1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat-FF.user.js)
 2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript-FF.user.js)
