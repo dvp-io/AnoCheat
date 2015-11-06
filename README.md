@@ -6,7 +6,7 @@ Avant toute chose vous devez installer un gestionnaire d'userscript.
 
 - [TamperMonkey pour Chromium/Chrome v29+](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
 - [TamperMonkey pour Opera Next v15+](https://addons.opera.com/en/extensions/details/tampermonkey-beta/?display=en)
-- [TamperMonkey pour Firefox] ([indisponible actuellement](https://github.com/dvp-io/AnoCheat/issues/1))
+- [Scriptish pour Firefox](https://addons.mozilla.org/en-US/firefox/addon/scriptish/)
 - [TamperMonkey pour Safari v5+](https://safari.tampermonkey.net/tampermonkey.safariextz)
 - [TamperMonkey pour Dolphin (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin)
 - [TamperMonkey pour UC Browser (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.uc)
@@ -14,20 +14,23 @@ Avant toute chose vous devez installer un gestionnaire d'userscript.
 ## Compatibilité
 - [x] Chrome / Chromium
 - [x] Opera Next
+- [x] Firefox
 
 **Non testé, retours bienvenus**
 - [ ] Safari
 - [ ] Dolphin
 - [ ] UC Browser
 
-**Incompatible pour l'instant**
-- [ ] Firefox ([incompatibilité](https://github.com/dvp-io/AnoCheat/issues/1))
-
 ## Installation
-Vous devez installer le framework ([AnoCheat](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)) AVANT le script ([GeckoScript](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)) et vous assurer de l'ordre d'execution.
+**NOTE: Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vous assurer de l'ordre d'execution.**
 
+Chrome :
 1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
 2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
+
+Firefox :
+1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat-FF.user.js)
+2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript-FF.user.js)
 
 ## Bug et suggestions
 Vous pouvez soumettre les bugs trouvés et vos suggestions sur le [tracker du projet](https://github.com/dvp-io/AnoCheat/issues).
@@ -52,3 +55,23 @@ Certains d'entre vous rencontrent des problèmes pour se connecter depuis leur p
 - [http://chat.dvp.io](http://chat.dvp.io)
 - [http://87.98.168.209](http://87.98.168.209)
 - [http://149.202.80.151](http://149.202.80.151)
+
+## Fonctionalités
+
+Raccourcis clavier :
+
+Touches | Action 
+--------|-------
+Double-clic + CTRL | Citer le message
+Double-clic + Shift | Alerter la modération (cite le message)
+Double-clic + ALT | Supprimer/Modérer le message
+ALT + Flèche droite | Afficher/Masquer la liste des membres
+ALT + Flèche du bas | Afficher/masquer la zone de saisie
+
+Ergonomie :
+- Les onglets de conversation peuvent êtres réorganisés (Drag & Drop)
+- Un sélecteur de thème vous permet changer le rendu visuel du chat
+
+## Fonctionalités retirées
+
+- Double-clic (réponse à un message) : Implémenté directement sur le chat (3.0.1)
