@@ -1,5 +1,15 @@
 #Changelog GeckoScript
 
+## 2.3.4
+
+Général :
+
+- Le script est désormais disponible pour Firefox
+
+Correctifs :
+
+- Correction d'un bug mineur qui empêchait le Drag & Drop des onglets de fonctionner sous Firefox 
+
 ## 2.3.3
 
 Général :

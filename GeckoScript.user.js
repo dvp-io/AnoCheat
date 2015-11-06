@@ -11,7 +11,7 @@
 // @include       http://149.202.80.151/
 // @include       http://chat.dvp.io
 // @include       http://chat.dvp.io/
-// @version       2.3.3
+// @version       2.3.4
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -98,12 +98,14 @@ document.querySelector('#conversations').addEventListener('dblclick', function(e
 // On écoute la modification du DOM
 document.addEventListener("DOMSubtreeModified", function(ev) {
 
-  /* Drag & drop onglets
-   * Permet de réorganiser les onglets de conversation dans l'ordre voulu
-   */
-  if(ev.srcElement.id == "barreOnglets") {
-    $(".onglet:not(#onglet0)").draggable({addClasses: false, containment: "parent", axis:"x", obstacle: ".onglet"});
-  }
+    var target = ev.target || ev.srcElement;
+
+    /* Drag & drop onglets
+     * Permet de réorganiser les onglets de conversation dans l'ordre voulu
+     */
+    if(target.id == "barreOnglets") {
+      $(".onglet:not(#onglet0)").draggable({addClasses: false, containment: "parent", axis:"x", obstacle: ".onglet"});
+    }
 
 }, false);
 
@@ -124,4 +126,3 @@ document.addEventListener('keydown', function(e) {
   }
 
 });
-
