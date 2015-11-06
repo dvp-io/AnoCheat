@@ -84,6 +84,7 @@ ALT + Flèche du bas | Afficher/masquer la zone de saisie
 Ergonomie :
 - Les onglets de conversation peuvent êtres réorganisés (Drag & Drop)
 - Un sélecteur de thème vous permet changer le rendu visuel du chat
+- Un bouton vous permet d'upload facilement des fichiers dans la conversation ouverte
 
 ## Fonctionalités retirées
 
