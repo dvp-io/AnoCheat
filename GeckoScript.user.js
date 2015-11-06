@@ -11,7 +11,7 @@
 // @include       http://149.202.80.151/
 // @include       http://chat.dvp.io
 // @include       http://chat.dvp.io/
-// @version       2.3.2
+// @version       2.3.3
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -19,7 +19,7 @@
 // @run-at        document-idle
 // ==/UserScript==
 
-if(AC_version !== '2.1.1') {
+if(AC_version !== '2.1.2') {
   alert("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
   throw new Error("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
 }
@@ -31,6 +31,9 @@ if(version !== '3.0.1') {
 
 // Ajout de l'entrée du log pour le chargement du script
 AC_logAdd('success',"GeckoScript v" + GM_info.script.version + " chargé");
+
+// Bouton d'upload
+AC_buttonAdd('Upload', function() { envoyerFichier($('.conversation:visible').attr('id').replace('conversation','')); }, {after:'insererImage'});
 
 // Création du sélecteur de style
 AC_cssAdd('#dvpio_style{margin:0 5px;}');

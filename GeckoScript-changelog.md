@@ -1,5 +1,15 @@
 #Changelog GeckoScript
 
+## 2.3.3
+
+Général :
+
+- Nouvelle version du Framework requise (2.1.2)
+
+Fonctionalités :
+
+- Ajout d'un bouton dans la barre d'outil pour upload des fichiers facilement
+
 ## 2.3.2
 
 Général :
