@@ -3,8 +3,6 @@
 // @author        Antoine 'Gecko' Pous <gecko@dvp.io>
 // @licence       LGPL v3
 // @description   Script, pour Firefox, ajoutant des fonctionalités à l'AnoChat, nécessite l'AnoCheat pour fonctionner
-// @include       http://chat.preprod.developpez.net
-// @include       http://chat.preprod.developpez.net/
 // @include       http://chat.developpez.com
 // @include       http://chat.developpez.com/
 // @include       http://87.98.168.209
