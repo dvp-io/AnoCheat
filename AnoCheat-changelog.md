@@ -1,16 +1,35 @@
 # Changelog AnoCheat
 
+## 2.2.0
+
+Général :
+
+- Nouvelle version du chat requise (3.0.2)
+- Chargement de jQuery-ui 1.8.18 (édition complète)
+
+Fonctionalités :
+
+- Implémentation de la méthode `AC_notify`
+- Implémentation de la méthode `AC_callAPI`
+- Implémentation de la méthode `AC_configRemove`
+- Implémentation de la méthode `AC_bangAdd` **Beta**
+- Implémentation de l'objet `AC_bangList`
+
+Correctifs :
+
+- Les méthodes `AC_config*` stockent les données dans le `localStorage`, les `cookies` ou `AC_config` selon la disponibilité
+- LStorage retourne maintenant l'état d'accessibilité du localStorage
+- CStorage retourne maintenant l'état d'accessibilité des cookies
+
 ## 2.1.2
 
 Général :
 
 - Le Framework est désormais disponible pour Firefox
 
-## 2.1.2
-
 Fonctionalités :
 
-- AC_buttonAdd prend maintenant un troisième paramètre optionnel sous forme d'objet `{after|before:'inputID'}`
+- `AC_buttonAdd` prend maintenant un troisième paramètre optionnel sous forme d'objet `{after|before:'inputID'}`
 
 ## 2.1.1
 
@@ -26,15 +45,15 @@ Général :
 
 Correctifs :
 
-- La méthode AC_addStyle est renommée AC_cssAdd
+- La méthode `AC_addStyle` est renommée `AC_cssAdd`
 - Le menu DVP I/O s'ouvre maintenant à la bonne place quelque soit la résolution
 - Le menu DVP I/O se ferme automatiquement quand le curseur sort du menu
 - Les logs sont désormais contenus dans des `div`
 
 Fonctionalités :
 
-- Implémentation de la méthode  AC_configWrite
-- Implémentation de la méthode AC_configRead
+- Implémentation de la méthode `AC_configWrite`
+- Implémentation de la méthode `AC_configRead`
 - Ajout d'un menu pointant vers le tracker
 - Ajout d'un menu pointant vers le projet
 
@@ -50,7 +69,7 @@ Correctifs :
 
 - Prise en charge de l'IP du chat
 - Ajout d'une entrée log pour indiquer le bon chargement du framework
-- Changement de la portée de la variable AC_version
+- Changement de la portée de la variable `AC_version`
 
 ## 2.0.0
 
@@ -60,10 +79,10 @@ Général:
 
 Fonctionalités :
 
-- Implémentation de la variable AC_version
+- Implémentation de la variable `AC_version`
 - Ajout d'un menu à gauche du color picker
-- Implémentation de la méthode AC_buttonAdd
-- Implémentation de la méthode AC_menuAdd
-- Implémentation de la méthode AC_UUID
-- Implémentation de la méthode AC_addStyle
+- Implémentation de la méthode `AC_buttonAdd`
+- Implémentation de la méthode `AC_menuAdd`
+- Implémentation de la méthode `AC_UUID`
+- Implémentation de la méthode `AC_addStyle`
 - Implémentation d'Event Emitter
