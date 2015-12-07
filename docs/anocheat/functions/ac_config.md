@@ -12,7 +12,7 @@ Le système utilisera le meilleur endroit à sa disposition, ces lieux sont (par
 ## AC_configRead
 Pour lire la configuration il vous suffit d'indiquer le nom de votre module.
 
-**Paramètres : **
+**Paramètres :**
 - **name** ([string](#)) Nom du module
 
 **Retours :**
