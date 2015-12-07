@@ -84,8 +84,8 @@ ALT + Flèche du bas | Afficher/masquer la zone de saisie
 Ergonomie :
 - Les onglets de conversation peuvent êtres réorganisés (Drag & Drop)
 - Un sélecteur de thème vous permet changer le rendu visuel du chat
-- Un bouton vous permet d'upload facilement des fichiers dans la conversation ouverte
 
 ## Fonctionalités retirées
 
-- Double-clic (réponse à un message) : Implémenté directement sur le chat (3.0.1)
+- Bouton d'upload : Implémenté depuis la version 3.0.2 du chat
+- Double-clic (réponse à un message) : Implémenté depuis la version 3.0.1 du chat
