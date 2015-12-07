@@ -9,7 +9,7 @@ Le système utilisera le meilleur endroit à sa disposition, ces lieux sont (par
 
 **Important :** La configuration n'est pas persistante si le LocalStorage et les cookies ne sont pas disponibles.
 
-## Lire la configuration
+## AC_configRead
 Pour lire la configuration il vous suffit d'indiquer le nom de votre module.
 
 **Paramètres : **
@@ -23,7 +23,7 @@ Pour lire la configuration il vous suffit d'indiquer le nom de votre module.
 AC_configRead('notifier'); // Retourne un objet JSON {} ou null
 ```
 
-## Supprimer la configuration
+## AC_configRemove
 La suppression de la configuration est définitive et irréversible, elle consiste à effacer l'intégralité des données pour un module.
 
 **Paramètres :**
@@ -33,7 +33,7 @@ La suppression de la configuration est définitive et irréversible, elle consis
 AC_configRemove('notifier'); // La configuration est désormais nulle
 ```
 
-## Enregistrer/Editer la configuration
+## AC_configWrite
 L'enregistrement d'une configuration peut être total ou partiel, de plus cette méthode peut faire référence à `AC_configRemove` si 
 l'objet passé en paramètre est vide. Vous pouvez également supprimer une clé en la laissant vide.
 
