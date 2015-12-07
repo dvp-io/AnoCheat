@@ -1,14 +1,16 @@
 # Méthodes AC_sound
-Les méthodes `AC_sound*` permettent de jouer un son à la demande. C'est très pratique pour mutualiser des sons entre plusieurs fonctionalités.
+Les méthodes `AC_sound*` permettent d'ajouter et jouer des sons à la demande. C'est très pratique pour mutualiser des sons
+entre plusieurs fonctionalités.
 
-## Obtenir la liste des sons de la médiathèque
-Vous pouvez facilement obtenir la liste complète des sons de la médiathèque, notez que vous n'aurez que les noms.
+## AC_soundList
+Vous pouvez facilement obtenir la liste complète des sons de la médiathèque, notez que vous n'aurez que la liste des noms
+sous forme de tableau.
 
 ```Javascript
-console.log(AC_soundGet()); // Affichera ['son 1','son 2','...']
+AC_soundList(); // Affichera ['son 1','son 2','...']
 ```
 
-## Ajouter un son à la médiathèque
+## AC_soundAdd
 
 Ajouter un son permet de le rendre disponible pour tous les autres scripts quels qu'ils soient. La méthode `AC_soundAdd` permet de déclarer le
 fichier à ajouter.
@@ -29,7 +31,7 @@ Une fois un son ajouté il ne peut être supprimé ou modifié que lors du recha
 
 *Afin d'éviter tout problème de chargement, il est conseillé de ne pas dépasser 10kb par fichier*
 
-## Jouer un son
+## AC_soundPlay
 
 Jouer un son est très facile, il vous suffit d'indiquer le nom du son à jouer ;o
 
