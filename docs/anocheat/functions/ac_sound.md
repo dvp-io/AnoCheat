@@ -14,8 +14,8 @@ Ajouter un son permet de le rendre disponible pour tous les autres scripts quels
 fichier à ajouter.
 
 **Paramètres :**
-- **name** (string) Nom du son dans la médiathèque
-- **sound** (string) URL du fichier ou sa version encodée en base64 (vous devez inclure l'entête)
+- **name** ([string](#)) Nom du son dans la médiathèque
+- **sound** ([string](#)) URL du fichier ou sa version encodée en base64 (vous devez inclure l'entête)
 
 ```Javascript
 // Ajout du fichier avec son URL
