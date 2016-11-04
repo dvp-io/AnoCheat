@@ -327,7 +327,7 @@ function AnoCheat() {
 
   // Lien vers le tracker
   AC_menuAdd('Signaler un bug, faire une suggestion', "N'hésitez pas à signaler les bug ou proposer vos idées d'amélioration ;)", function() {
-    window.open('https://github.com/dvp-io/AnoCheat#bug-et-suggestions', '_blank');
+    window.open('https://github.com/dvp-io/AnoCheat#bugs-et-suggestions', '_blank');
   });
 
   // Injection du menu
