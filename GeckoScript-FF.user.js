@@ -11,7 +11,7 @@
 // @include       http://149.202.80.151/
 // @include       http://chat.dvp.io
 // @include       http://chat.dvp.io/
-// @version       2.3.4
+// @version       2.3.5
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript-FF.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript-FF.user.js
 // @website       http://dvp.io
@@ -29,14 +29,14 @@ function getGlobal(callback) {
 
 function GeckoScript() {
 
-  GS_version = "2.3.4";
+  GS_version = "2.3.5";
 
-  if(AC_version !== '2.1.2') {
+  if(AC_version !== '2.2.1') {
     alert("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
     throw new Error("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
   }
 
-  if(version !== '3.0.1') {
+  if(version !== '3.0.3') {
     alert("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
     throw new Error("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
   }
