@@ -74,7 +74,7 @@ AC_cssAdd('#dvpio_button,#dvpio_menu li img{vertical-align:middle}#dvpio_menu{po
 // On déclare les variables
 var toolBar = document.getElementById('barreOutils'),
     colorPicker = document.getElementById('selecteurCouleur'),
-    menu_logo = 'http://media.dvp.io/anocheat/19x20_logo_dvpio.png',
+    menu_logo = 'https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/19x20_logo_dvpio.png',
     AC_debug = 1,
     LStorage = function(){var t="test";try{return localStorage.setItem(t,t),localStorage.removeItem(t),!0}catch(e){return!1}},
     CStorage = function(){var e=navigator.cookieEnabled?!0:!1;return"undefined"!=typeof navigator.cookieEnabled||e||(document.cookie="testcookie",e=-1!=document.cookie.indexOf("testcookie")?!0:!1),document.cookie="test=; expires=Thu, 01 Jan 1970 00:00:00 UTC",e},
