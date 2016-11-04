@@ -32,9 +32,6 @@ if(version !== '3.0.3') {
 // Ajout de l'entrée du log pour le chargement du script
 AC_logAdd('success',"GeckoScript v" + GM_info.script.version + " chargé");
 
-// Bouton d'upload
-AC_buttonAdd('Upload', function() { envoyerFichier($('.conversation:visible').attr('id').replace('conversation','')); }, {after:'insererImage'});
-
 // Création du sélecteur de style
 AC_cssAdd('#dvpio_style{margin:0 5px;}');
 $('<select />').attr('id','dvpio_style').insertBefore('#selecteurCouleur').on('change', function() {
