@@ -67,7 +67,6 @@ Certains d'entre vous rencontrent des problèmes pour se connecter depuis leur p
 - [http://chat.developpez.com](http://chat.developpez.com)
 - [http://chat.dvp.io](http://chat.dvp.io)
 - [http://87.98.168.209](http://87.98.168.209)
-- [http://149.202.80.151](http://149.202.80.151)
 
 ## Fonctionalités
 
