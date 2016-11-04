@@ -1,5 +1,18 @@
 # Changelog AnoCheat
 
+## 2.2.2
+
+Correctifs :
+
+- L'image du menu est maintenant correctement affichée
+- Correction du lien renvoyant vers l'ancre Bugs & Suggestion
+
+## 2.2.1
+
+Général :
+
+- Nouvelle version du chat requise (3.0.3)
+
 ## 2.2.0
 
 Général :
