@@ -11,7 +11,7 @@
 // @include       http://87.98.168.209/
 // @include       http://149.202.80.151
 // @include       http://149.202.80.151/
-// @version       2.2.0
+// @version       2.2.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat-FF.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat-FF.user.js
 // @website       http://dvp.io
@@ -32,7 +32,7 @@ function getGlobal(callback) {
 
 function AnoCheat() {
   // Test de la version du chat
-  if(version !== '3.0.2') {
+  if(version !== '3.0.3') {
      alert("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
      throw new Error("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
   }
