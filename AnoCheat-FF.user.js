@@ -50,7 +50,7 @@ function AnoCheat() {
   NodeList.prototype.forEach = Array.prototype.forEach;
 
   AC_bangList = {};
-  AC_version = '2.2.0';
+  AC_version = '2.2.1';
   AC_autoCompletion = [];
   AC_msgHisto = [];
 
