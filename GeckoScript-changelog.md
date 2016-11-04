@@ -1,5 +1,22 @@
 #Changelog GeckoScript
 
+## 2.3.6
+
+Général :
+
+- Nouvelle version du Framework requise (2.2.2)
+
+Fonctionalités :
+
+- Suppression du bouton d'upload (intégré au chat depuis la version 3.0.2)
+
+## 2.3.5
+
+Général :
+
+- Nouvelle version du chat requise (3.0.3)
+- Nouvelle version du Framework requise (2.2.1)
+
 ## 2.3.4
 
 Général :
