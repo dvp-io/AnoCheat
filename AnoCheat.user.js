@@ -21,8 +21,9 @@
 
 // Test de la version du chat
 if(version !== '3.0.3') {
-   alert("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
-	throw new Error("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
+  err = "Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour";
+  alert(err);
+  throw new Error(err);
 }
 
 // Chargement jQuery UI 1.8.18 complet
