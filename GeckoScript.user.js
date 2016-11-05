@@ -7,8 +7,6 @@
 // @include       http://chat.developpez.com/
 // @include       http://87.98.168.209
 // @include       http://87.98.168.209/
-// @include       http://149.202.80.151
-// @include       http://149.202.80.151/
 // @include       http://chat.dvp.io
 // @include       http://chat.dvp.io/
 // @version       2.3.6
