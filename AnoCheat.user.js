@@ -26,6 +26,9 @@ if(version !== '3.0.3') {
   throw new Error(err);
 }
 
+// Ajout de $.preBind
+jQuery.fn.getEvents=function(){return"function"==typeof jQuery._data?jQuery._data(this.get(0),"events")||{}:"function"==typeof this.data?this.data("events")||{}:{}},jQuery.fn.preBind=function(t,e,n){return this.each(function(){var i=jQuery(this);i.bind(t,e,n);var r=i.getEvents()[t];jQuery.isArray(r)&&r.unshift(r.pop())}),this};
+
 // Ajout de trim
 if(!String.prototype.trim){String.prototype.trim=function(){return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,'');};}
 
