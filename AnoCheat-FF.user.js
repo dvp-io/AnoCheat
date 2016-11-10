@@ -13,6 +13,9 @@
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat-FF.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat-FF.user.js
 // @website       http://dvp.io
+// @grant         GM_notification
+// @grant         GM_info
+// @grant         GM_getRessources
 // @run-at        document-idle
 // ==/UserScript==
 
