@@ -226,7 +226,7 @@ function AnoCheat() {
    */
   AC_logAdd = function(type, message) {
     if(['error','warning','notice','success'].indexOf(type) === -1) {
-      throw new Error("Le type de log est invalide, les choix possibles sont error|warning|notice|success");
+      throw new Error("Le type de log est invalide, les valeurs possibles sont error|warning|notice|success");
     }
     var logDate = new Date();
     var logTime = (logDate.getHours()<10?'0':'') + logDate.getHours() + ':' + (logDate.getMinutes()<10?'0':'') + logDate.getMinutes();
