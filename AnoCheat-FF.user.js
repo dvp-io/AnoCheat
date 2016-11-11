@@ -9,7 +9,7 @@
 // @include       http://chat.dvp.io/
 // @include       http://87.98.168.209
 // @include       http://87.98.168.209/
-// @version       2.2.2
+// @version       2.3.0
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat-FF.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat-FF.user.js
 // @website       http://dvp.io
@@ -58,7 +58,7 @@ function AnoCheat() {
   NodeList.prototype.forEach = Array.prototype.forEach;
 
   AC_bangList = {};
-  AC_version = '2.2.2';
+  AC_version = '2.3.0';
   AC_autoCompletion = [];
   AC_msgHisto = [];
 

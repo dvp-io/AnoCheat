@@ -1,5 +1,12 @@
 # Changelog AnoCheat
 
+## 2.3.0
+
+Fonctionalités :
+
+- Ajout de la méthode `str.trim()` si elle n'existe pas [Source MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/trim)
+- Ajout de la méthode `$.preBind` pour permettre de bind des events avant celles du chat
+
 ## 2.2.2
 
 Correctifs :
