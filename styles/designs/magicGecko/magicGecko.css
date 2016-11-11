@@ -1,0 +1,89 @@
+/**
+ *                    <<<<>>>>>>           .----------------------------.
+ *                 _>><<<<>>>>>>>>>       /               _____________)
+ *        \|/      \<<<<<  < >>>>>>>>>   /            _______________)
+ *  -------*--===<=<<           <<<<<<<>/         _______________)
+ *        /|\     << @    _/      <<<<</       _____________)
+ *               <  \    /  \      >>>/      ________)  ____
+ *                   |  |   |       </      ______)____((- \\\\
+ *                   o_|   /        /      ______)         \  \\\\    \\\\\\\
+ *                        |  ._    (      ______)           \  \\\\\\\\\\\\\\\\
+ *                        | /       `----------'    /       /     \\\\\\\     \\
+ *                .______/\/     /                 /       /          \\\
+ *               / __.____/    _/         ________(       /\
+ *              / / / ________/`---------'         \     /  \_
+ *             / /  \ \                             \   \ \_  \
+ *            ( <    \ \                             >  /    \ \
+ *             \/      \\_                          / /       > )
+ *                      \_|                        / /       / /
+ *-------------------------------*               _//       _//
+ |     Gecko the dream maker     |              /_|       /_|
+ *-------------------------------*--------------------------------------------*/
+@-moz-keyframes magicGecko {
+  from {
+    background-position: top left
+  }
+  to {
+    background-position: top right
+  }
+}
+@-webkit-keyframes magicGecko {
+  from {
+    background-position: top left
+  }
+  to {
+    background-position: top right
+  }
+}
+@-o-keyframes magicGecko {
+  from {
+    background-position: top left
+  }
+  to {
+    background-position: top right
+  }
+}
+@-ms-keyframes magicGecko {
+  from {
+    background-position: top left
+  }
+  to {
+    background-position: top right
+  }
+}
+@-khtml-keyframes magicGecko {
+  from {
+    background-position: top left
+  }
+  to {
+    background-position: top right
+  }
+}
+@keyframes magicGecko {
+  from {
+    background-position: top left
+  }
+  to {
+    background-position: top right
+  }
+}
+.magicGecko * a.nomSalon,
+.magicGecko * a.nomSalon:hover,
+.magicGecko * input,
+.magicGecko * input:hover {
+  background-image: -webkit-linear-gradient(left, red, orange, #ff0, green, #00f, indigo, violet, indigo, #00f, green, #ff0, orange, red);
+  background-image: -moz-linear-gradient(left, red, orange, #ff0, green, #00f, indigo, violet, indigo, #00f, green, #ff0, orange, red);
+  background-image: -o-linear-gradient(left, red, orange, #ff0, green, #00f, indigo, violet, indigo, #00f, green, #ff0, orange, red);
+  background-image: -ms-linear-gradient(left, red, orange, #ff0, green, #00f, indigo, violet, indigo, #00f, green, #ff0, orange, red);
+  background-image: -khtml-linear-gradient(left, red, orange, #ff0, green, #00f, indigo, violet, indigo, #00f, green, #ff0, orange, red);
+  background-image: linear-gradient(left, red, orange, #ff0, green, #00f, indigo, violet, indigo, #00f, green, #ff0, orange, red);
+  animation: magicGecko .5s forwards linear infinite;
+  background-size: 50% auto;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -khtml-background-clip: text;
+  background-clip: text;
+  color: transparent!important
+}
