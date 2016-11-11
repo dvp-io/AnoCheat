@@ -9,7 +9,7 @@ Général :
 Fonctionalités :
 
 - Ajout du style Magic Gecko, attention ça pique les yeux ! [Source](https://github.com/antoine-pous/magic-gecko/blob/master/magicGecko.css)
-- Désormais si le focus est dans la zone de saisie la combinaison `Shift + ⬆` ou `Shift + ⬇` permet de parcourir l'historique des messages envoyés [#2]()
+- Désormais si le focus est dans la zone de saisie la combinaison `Shift + ⬆` ou `Shift + ⬇` permet de parcourir l'historique des messages envoyés [#2](https://github.com/dvp-io/AnoCheat/issues/2)
 - Désormais le BBCode JOIN est trim pour éviter de casser le lien vers le salon [Ticket 879](http://www.developpez.net/forums/issue.php?issueid=879)
 
 Correctifs :
