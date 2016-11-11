@@ -103,7 +103,6 @@ function GeckoScript() {
 
     // Si on à aucun histo pour ce salon on ne fait rien
     if(typeof GS_back[room] === "undefined" || GS_back[room].length === 0) {
-      console.log('pas d\'histo pour ' + room);
       return false;
     }
 
@@ -120,7 +119,6 @@ function GeckoScript() {
   }
 
   function GS_setBack(room, msg) {
-    console.log('setback: ' + room + ' => ' + msg);
     if(typeof GS_back[room] === 'undefined') {
       GS_back[room] = [];
     }
