@@ -9,7 +9,7 @@
 // @include       http://87.98.168.209/
 // @include       http://chat.dvp.io
 // @include       http://chat.dvp.io/
-// @version       2.3.6
+// @version       2.4.0
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript-FF.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript-FF.user.js
 // @website       http://dvp.io
@@ -27,20 +27,24 @@ function getGlobal(callback) {
 
 function GeckoScript() {
 
-  GS_version = "2.3.6";
+  GS_version = "2.4.0";
 
-  if(AC_version !== '2.2.2') {
-    alert("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
-    throw new Error("Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour");
+  if(AC_version !== '2.3.0') {
+    err = "Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour";
+    alert(err);
+    throw new Error(err);
   }
 
   if(version !== '3.0.3') {
-    alert("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
-    throw new Error("Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour");
+    err = "Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour";
+    alert(err);
+    throw new Error(err);
   }
 
   // Ajout de l'entrée du log pour le chargement du script
   AC_logAdd('success',"GeckoScript v" + GS_version + " chargé");
+
+  $("#barreOnglets").sortable({ revert: false, axis: 'x' });
 
   // Création du sélecteur de style
   AC_cssAdd('#dvpio_style{margin:0 5px;}');
@@ -57,6 +61,11 @@ function GeckoScript() {
   // Ajout du choix par défaut
   $('<option />').attr('value','-1').text('AnoChat v3').appendTo('#dvpio_style');
 
+  // rend le BBCode JOIN compatible avec l'auto complétion
+  GS_bbJoin = function(m, p1, offset, str) {
+    return "[JOIN]" + p1.trim() + "[/JOIN]";
+  };
+
   // Méthode de déclaration d'un nouveau style
   GS_styleAdd = function(cls, name, css) {
     $('<option />').attr('value',cls).text(name).appendTo('#dvpio_style');
@@ -66,6 +75,57 @@ function GeckoScript() {
   // Ajout des styles validés
   GS_styleAdd('monochrome', 'Monochrome','.monochrome,.monochrome :not(.ui-dialog-titlebar-close):not(.fermeture):not(#quitterChat):not(.icone):not(#reduireListe):not(#boutonMenuChat):not(.horodatage):not(.cocheInvisible){color:#000!important;background:#fff!important;text-shadow:none!important;box-shadow:0 0!important;border-color:#000!important}.monochrome * .ongletActivite{border-style:dotted!important}.monochrome * .ongletActivite table:first-child{font-style:italic!important}.monochrome * .ongletMessage{border-style:dashed!important}.monochrome * .ongletMessage table:first-child{text-decoration:underline!important}.monochrome * #boutonMenuChat,.monochrome * #quitterChat,.monochrome * #reduireListe,.monochrome * .fermeture,.monochrome * .horodatage,.monochrome * .icone,.monochrome * .ui-dialog-titlebar-close,.monochrome * img,.monochrome img{-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:gray;-webkit-filter:grayscale(100%)}.monochrome * .ColorPickerDivSample{display:none!important}.monochrome * .elementcomplsel{text-decoration:underline}.monochrome #menuChat a:hover,.monochrome #menuConversation a:hover,.monochrome #menuUtilisateur a:hover{text-decoration:underline;border-radius:initial}.monochrome #menuChat,.monochrome #menuConversation,.monochrome #menuUtilisateur{border:1px solid #000}.monochrome #menuChat * span.cocheInvisible{color:#fff}.monochrome * .titreCadre{border-top:1px solid;border-left:1px solid;border-right:1px solid}.monochrome * #barreStatut,.monochrome * .conversation{border-top:1px solid}');
   GS_styleAdd('console', 'Console', '.console,.console :not(.ui-dialog-titlebar-close):not(.fermeture):not(#quitterChat):not(.icone):not(#reduireListe):not(#boutonMenuChat):not(.horodatage):not(.cocheInvisible){color:#fff!important;background:#000!important;text-shadow:none!important;box-shadow:0 0!important;border-color:#fff!important}.console * .ongletActivite{border-style:dotted!important}.console * .ongletActivite table:first-child{font-style:italic!important}.console * .ongletMessage{border-style:dashed!important}.console * .ongletMessage table:first-child{text-decoration:underline!important}.console * #boutonMenuChat,.console * #quitterChat,.console * #reduireListe,.console * .fermeture,.console * .horodatage,.console * .icone,.console * .ui-dialog-titlebar-close,.console * img,.console img{-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:gray;-webkit-filter:grayscale(100%)}.console * .ColorPickerDivSample{display:none!important}.console * .elementcomplsel{text-decoration:underline}.console #menuChat a:hover,.console #menuConversation a:hover,.console #menuUtilisateur a:hover{text-decoration:underline;border-radius:initial}.console #menuChat,.console #menuConversation,.console #menuUtilisateur{border:1px solid #fff}.console #menuChat * span.cocheInvisible{color:#000}.console * .titreCadre{border-top:1px solid;border-left:1px solid;border-right:1px solid}.console * #barreStatut,.console * .conversation{border-top:1px solid}');
+  GS_styleAdd('magicGecko', 'Magic Gecko', '@-moz-keyframes magicGecko{from{background-position:top left}to{background-position:top right}}@-webkit-keyframes magicGecko{from{background-position:top left}to{background-position:top right}}@-o-keyframes magicGecko{from{background-position:top left}to{background-position:top right}}@-ms-keyframes magicGecko{from{background-position:top left}to{background-position:top right}}@-khtml-keyframes magicGecko{from{background-position:top left}to{background-position:top right}}@keyframes magicGecko{from{background-position:top left}to{background-position:top right}}.magicGecko * a.nomSalon,.magicGecko * a.nomSalon:hover,.magicGecko * input,.magicGecko * input:hover{background-image:-webkit-linear-gradient(left,red,orange,#ff0,green,#00f,indigo,violet,indigo,#00f,green,#ff0,orange,red);background-image:-moz-linear-gradient(left,red,orange,#ff0,green,#00f,indigo,violet,indigo,#00f,green,#ff0,orange,red);background-image:-o-linear-gradient(left,red,orange,#ff0,green,#00f,indigo,violet,indigo,#00f,green,#ff0,orange,red);background-image:-ms-linear-gradient(left,red,orange,#ff0,green,#00f,indigo,violet,indigo,#00f,green,#ff0,orange,red);background-image:-khtml-linear-gradient(left,red,orange,#ff0,green,#00f,indigo,violet,indigo,#00f,green,#ff0,orange,red);background-image:linear-gradient(left,red,orange,#ff0,green,#00f,indigo,violet,indigo,#00f,green,#ff0,orange,red);animation:magicGecko .5s forwards linear infinite;background-size:50% auto;-webkit-background-clip:text;-moz-background-clip:text;-o-background-clip:text;-ms-background-clip:text;-khtml-background-clip:text;background-clip:text;color:transparent!important}');
+
+  var GS_back = {};
+  var GS_iback = {};
+
+  function GS_getNextMsg(room) {
+
+    // Si on à aucun histo pour ce salon on ne fait rien
+    if(typeof GS_back[room] === "undefined" || GS_back[room].length === 0) {
+      return false;
+    }
+
+    // Si on à pas de pointeur ou qu'on est au bout du rouleau
+    if(typeof GS_iback[room] === "undefined" || ++GS_iback[room] === GS_back[room].length) {
+      GS_iback[room] = 0;
+    }
+
+    // Si le message existe bien
+    if(typeof GS_back[room][GS_iback[room]] !== "undefined") {
+      // On injecte le message dans la zone de saisie
+      $("#zoneSaisie").val(GS_back[room][GS_iback[room]]);
+    }
+  }
+
+  function GS_getPrevMsg(room) {
+
+    // Si on à aucun histo pour ce salon on ne fait rien
+    if(typeof GS_back[room] === "undefined" || GS_back[room].length === 0) {
+      console.log('pas d\'histo pour ' + room);
+      return false;
+    }
+
+    // Si on à pas de pointeur ou qu'on est au bout du rouleau
+    if(typeof GS_iback[room] === "undefined" || --GS_iback[room] < 0) {
+      GS_iback[room] = GS_back[room].length -1;
+    }
+
+    // Si le message existe bien
+    if(typeof GS_back[room][GS_iback[room]] !== "undefined") {
+      // On injecte le message dans la zone de saisie
+      $("#zoneSaisie").val(GS_back[room][GS_iback[room]]);
+    }
+  }
+
+  function GS_setBack(room, msg) {
+    console.log('setback: ' + room + ' => ' + msg);
+    if(typeof GS_back[room] === 'undefined') {
+      GS_back[room] = [];
+    }
+    GS_back[room].unshift(msg);
+  }
 
   /* Réponse optimisée
    * Permet de répondre à un message en double cliquant dessus
@@ -77,7 +137,7 @@ function GeckoScript() {
 
       var zs = document.getElementById('zoneSaisie'),
         tid = e.target.parentElement.id,
-        msg = e.target.parentElement.innerText != undefined ? e.target.parentElement.innerText : e.target.parentElement.textContent;
+        msg = e.target.parentElement.innerText !== undefined ? e.target.parentElement.innerText : e.target.parentElement.textContent;
 
       // Si ctrl est pressé on cite le message
       if(e.ctrlKey || e.metaKey) {
@@ -107,32 +167,48 @@ function GeckoScript() {
 
     var target = ev.target || ev.srcElement;
 
-    /* Drag & drop onglets
-     * Permet de réorganiser les onglets de conversation dans l'ordre voulu
-     */
-    if(target.id == "barreOnglets") {
-      $(".onglet:not(#onglet0)").draggable({addClasses: false, containment: "parent", axis:"x", obstacle: ".onglet"});
-    }
-
   }, false);
 
   // Binds
   document.addEventListener('keydown', function(e) {
     var charCode = e.which || e.keyCode;
+    $roomID = $('.conversation:visible').attr('id');
 
-    if(e.altKey) {
+    if(e.altKey && charCode === 40) {
+      if($('#zoneSaisie').is(':visible')) { masquerBas(); } else { afficherBas(); }
+    }
 
-      if(charCode === 40) {
-        if($('#zoneSaisie').is(':visible')) { masquerBas(); } else { afficherBas(); }
-      }
+    if(e.altKey && charCode === 39) {
+      if($('#connectes').is(':visible')) { masquerDroite(); } else { afficherDroite(); }
+    }
 
-      if(charCode === 39) {
-        if($('#connectes').is(':visible')) { masquerDroite(); } else { afficherDroite(); }
-      }
+    if(e.shiftKey && charCode === 38 && $('#zoneSaisie').is(':focus')) {
+      GS_getPrevMsg($roomID);
+    }
 
+    if(e.shiftKey && charCode === 40 && $('#zoneSaisie').is(':focus')) {
+      GS_getNextMsg($roomID);
     }
 
   });
-}
-getGlobal(GeckoScript);
 
+  $("#zoneSaisie").preBind("keydown", function (e) {
+
+    var charCode = e.which || e.keyCode;
+    $zoneSaisieData = $(this).val();
+    $roomID = $('.conversation:visible').attr('id');
+
+    // Clean le bbcode JOIN pour être compatible avec l'autocompletion
+    $(this).val($zoneSaisieData.replace(/\[join\](?:\s|)(.*)(?:\s|)\[\/join\]/i, GS_bbJoin));
+
+    if(charCode === 13) {
+
+      if($zoneSaisieData !== '') {
+        GS_setBack($roomID, $zoneSaisieData);
+      }
+
+    }
+  });
+}
+
+getGlobal(GeckoScript);

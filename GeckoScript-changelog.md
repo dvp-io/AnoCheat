@@ -1,4 +1,20 @@
-#Changelog GeckoScript
+# Changelog GeckoScript
+
+## 2.4.0
+
+Général :
+
+- Nouvelle version de Framework requise (2.3.0)
+
+Fonctionalités :
+
+- Ajout du style Magic Gecko, attention ça pique les yeux ! [Source](https://github.com/antoine-pous/magic-gecko/blob/master/magicGecko.css)
+- Désormais si le focus est dans la zone de saisie la combinaison `shift + ou ` permet de parcourir l'historique des messages envoyés [#2]()
+- Désormais le BBCode JOIN est trim pour éviter de casser le lien vers le salon [Ticket 879](http://www.developpez.net/forums/issue.php?issueid=879)
+
+Correctifs :
+
+- Les onglets de conversation ne peuvent plus se superposer
 
 ## 2.3.6
 

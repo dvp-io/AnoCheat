@@ -73,12 +73,15 @@ Certains d'entre vous rencontrent des problèmes pour se connecter depuis leur p
 Raccourcis clavier :
 
 Touches | Action 
---------|-------
-Double-clic + CTRL | Citer le message
-Double-clic + Shift | Alerter la modération (cite le message)
-Double-clic + ALT | Supprimer/Modérer le message
-ALT + Flèche droite | Afficher/Masquer la liste des membres
-ALT + Flèche du bas | Afficher/masquer la zone de saisie
+---|---
+`Double-clic` + `CTRL` | Citer le message
+`Double-clic` + `Shift` | Alerter la modération (cite le message)
+`Double-clic` + `ALT` | Supprimer/Modérer le message
+`ALT` + `Flèche droite` | Afficher/Masquer la liste des membres
+`ALT` + `⬇` | Afficher/masquer la zone de saisie
+** Historique personnel ** | _Vous devez avoir le focus dans la zone de saisie_
+`Shift` + `⬆` | Remonte l'historique personnel de la conversation en cours
+`Shift` + `⬇` | Descend l'historique personnel de la conversation en cours
 
 Ergonomie :
 - Les onglets de conversation peuvent êtres réorganisés (Drag & Drop)
