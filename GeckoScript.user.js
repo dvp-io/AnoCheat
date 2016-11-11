@@ -34,6 +34,14 @@ AC_logAdd('success',"GeckoScript v" + GM_info.script.version + " chargé");
 
 $("#barreOnglets").sortable({ revert: false, axis: 'x' });
 
+// Nouveau color picker
+$(".ColorPickerDivSample").replaceWith($("<input />").attr({type:"color",id:"geckolor",style:"height: 22px;width: 20px;border: 1px solid #CCC;background: linear-gradient(to bottom, #fcfcfc 0%,#e0e0e0 100%);border-radius: 12px;"}).val(couleurInitiale));
+
+$('#geckolor').on('change', function(e) {
+  envoyerCommande('/COLOR ' +$(this).val());
+  focusZoneSaisie();
+});
+
 // Création du sélecteur de style
 AC_cssAdd('#dvpio_style{margin:0 5px;}');
 $('<select />').attr('id','dvpio_style').insertBefore('#selecteurCouleur').on('change', function() {
