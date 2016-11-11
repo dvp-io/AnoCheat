@@ -79,7 +79,7 @@ Touches | Action
 `Double-clic` + `ALT` | Supprimer/Modérer le message
 `ALT` + `Flèche droite` | Afficher/Masquer la liste des membres
 `ALT` + `⬇` | Afficher/masquer la zone de saisie
-** Historique personnel ** | _Vous devez avoir le focus dans la zone de saisie_
+**Historique personnel** | _Vous devez avoir le focus dans la zone de saisie_
 `Shift` + `⬆` | Remonte l'historique personnel de la conversation en cours
 `Shift` + `⬇` | Descend l'historique personnel de la conversation en cours
 
