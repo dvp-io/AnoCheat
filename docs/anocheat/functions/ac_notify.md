@@ -13,6 +13,13 @@ Vous pouvez notifier l'utilisateur directement dans la conversation active du ch
 AC_notifyClient('success', 'Ma première notification! \o/');
 ```
 
-## Notifier l'utilisateur via le browser
+## AC_notifyBrowser
+Vous pouvez envoyer une notification au navigateur, si ce dernier est configuré pour l'accepter alors il enverra une notification système.
 
-**Non implémenté**
+**Paramètres :**
+- title ([string](#)) Titre de la notification
+- msg ([string](#)) Message à afficher
+
+```Javascript
+AC_notifyBrowser('success', 'Ma première notification! \o/');
+```
