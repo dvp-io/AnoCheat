@@ -9,7 +9,7 @@
 // @include       http://87.98.168.209/
 // @include       http://chat.dvp.io
 // @include       http://chat.dvp.io/
-// @version       2.4.0
+// @version       2.5.0
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -17,7 +17,7 @@
 // @run-at        document-idle
 // ==/UserScript==
 
-if(AC_version !== '2.3.0') {
+if(AC_version !== '2.4.0') {
   err = "Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour";
   alert(err);
   throw new Error(err);
@@ -38,7 +38,9 @@ $("#barreOnglets").sortable({ revert: false, axis: 'x' });
 $(".ColorPickerDivSample").replaceWith($("<input />").attr({type:"color",id:"geckolor",style:"height: 22px;width: 20px;border: 1px solid #CCC;background: linear-gradient(to bottom, #fcfcfc 0%,#e0e0e0 100%);border-radius: 12px;"}).val(couleurInitiale));
 
 $('#geckolor').on('change', function(e) {
-  envoyerCommande('/COLOR ' +$(this).val());
+  var _color = $(this).val();
+  envoyerCommande('/COLOR ' + _color);
+  AC_logAdd('notice', 'Sélection de la couleur <span style="color:' + _color + ';">' + _color + '</span>');
   focusZoneSaisie();
 });
 
@@ -205,5 +207,3 @@ $("#zoneSaisie").preBind("keydown", function (e) {
 
   }
 });
-
-

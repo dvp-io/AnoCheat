@@ -1,6 +1,16 @@
 # Changelog GeckoScript
 
-## 2.4.1 (version Scriptish uniquement)
+## 2.5.0
+
+Général :
+
+- Nouvelle version de Framework requise (2.4.0)
+
+Fonctionalités :
+
+- Remplacement du color picker du chat par celui du navigateur pour plus de choix
+
+## 2.4.1 (version spéciale FireFox uniquement)
 
 Général :
 
