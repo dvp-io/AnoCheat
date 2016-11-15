@@ -2,6 +2,8 @@
 
 ## 2.4.1 (version Scriptish uniquement)
 
+Général :
+
 - Fin du support de Scriptish, les méta renvoient maintenant vers la version classique
 
 ## 2.4.0
