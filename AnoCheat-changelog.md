@@ -1,5 +1,18 @@
 # Changelog AnoCheat
 
+## 2.4.0
+
+Fonctionalités :
+
+- Ajout de la méthode `str.hash` si elle n'existe pas
+- Support des notifications système via la méthode `AC_notifyBrowser`
+
+## 2.3.1 (version spéciale FireFox uniquement)
+
+Général :
+
+- Fin du support de Scriptish, les méta renvoient maintenant vers la version classique
+
 ## 2.3.0
 
 Fonctionalités :
