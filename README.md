@@ -13,11 +13,11 @@ Le projet AnoCheat permet d'agrémenter l'AnoChat de nouvelles fonctionalités e
 - [Fonctionalités retirées](https://github.com/dvp-io/AnoCheat#fonctionalités-retirées)
 
 ## Prérequis
-Avant toute chose vous devez installer un gestionnaire d'userscript.
+Avant toute chose vous devez installer [TamperMonkey](https://tampermonkey.net) sur votre navigateur.
 
 - [TamperMonkey pour Chromium/Chrome v29+](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
 - [TamperMonkey pour Opera Next v15+](https://addons.opera.com/en/extensions/details/tampermonkey-beta/?display=en)
-- [Scriptish pour Firefox](https://addons.mozilla.org/en-US/firefox/addon/scriptish/)
+- [TamperMonkey pour Firefox v46+](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
 - [TamperMonkey pour Safari v5+](https://safari.tampermonkey.net/tampermonkey.safariextz)
 - [TamperMonkey pour Dolphin (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin)
 - [TamperMonkey pour UC Browser (Android v4.0.3+)](https://play.google.com/store/apps/details?id=net.tampermonkey.uc)
@@ -33,17 +33,14 @@ Avant toute chose vous devez installer un gestionnaire d'userscript.
 - [ ] UC Browser
 
 ## Installation
-**NOTE: Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vous assurer de l'ordre d'execution.**
+**NOTE :** 
+Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vous assurer de l'ordre d'execution
 
-TamperMonkey (Chromium, Chrome, Opera, Safari, ...) :
+**Attention !**
+La version dédié à Firefox n'existe plus, TamperMonkey étant maintenant disponible vous pouvez utiliser la version classique de l'AnoCheat et du GeckoScript
 
 1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
 2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
-
-Scriptish (Firefox) :
-
-1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat-FF.user.js)
-2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript-FF.user.js)
 
 ## Bugs et suggestions
 Vous pouvez soumettre les bugs trouvés et vos suggestions sur le [tracker du projet](https://github.com/dvp-io/AnoCheat/issues).
