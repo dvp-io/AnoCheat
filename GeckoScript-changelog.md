@@ -1,5 +1,9 @@
 # Changelog GeckoScript
 
+## 2.4.1 (version Scriptish uniquement)
+
+- Fin du support de Scriptish, les méta renvoient maintenant vers la version classique
+
 ## 2.4.0
 
 Général :
