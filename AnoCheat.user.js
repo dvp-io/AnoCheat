@@ -9,7 +9,7 @@
 // @include       http://chat.dvp.io/
 // @include       http://87.98.168.209
 // @include       http://87.98.168.209/
-// @version       2.3.0
+// @version       2.4.0
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @website       http://dvp.io
@@ -123,6 +123,11 @@ AC_notify = function(type, msg) {
     }
   });
 
+}
+
+// Notification browser
+AC_notifyBrowser = function(title, msg) {
+  GM_notification(title, msg);
 }
 
 // Appel des API I/O
