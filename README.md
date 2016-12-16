@@ -60,10 +60,20 @@ Vous pouvez voir les évolutions sur les changelogs. Les nouveautés du framewor
 - [Changelog du Framework](./AnoCheat-changelog.md)
 
 ## Accessibilité
-Certains d'entre vous rencontrent des problèmes pour se connecter depuis leur poste de travail. Afin de palier à ce problème une liste d'IP et noms de domaine est disponible pour accéder au chat :
+Certains d'entre vous rencontrent des problèmes pour se connecter depuis leur poste de travail. Afin de palier à ce problème une liste d'IP et noms de domaine est disponible pour accéder au chat.
+
+### Adresses officielles
 - [http://chat.developpez.com](http://chat.developpez.com)
+- [http://87.98.168.209](http://87.98.168.209) - Developpez France
+
+### Adresses fournies par DVP I/O
 - [http://chat.dvp.io](http://chat.dvp.io)
-- [http://87.98.168.209](http://87.98.168.209)
+- [http://178.32.150.5](http://178.32.150.5) - DVP I/O Pologne
+- [http://5.196.237.44](http://5.196.237.44) - DVP I/O France
+- [http://5.135.21.60](http://5.135.21.60) - DVP I/O Finlande
+
+### Adresses fournies par des tiers
+*Pour proposer vos proxy contactez Gecko par MP*
 
 ## Fonctionalités
 
