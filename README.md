@@ -44,15 +44,6 @@ La version dédié à Firefox n'existe plus, TamperMonkey étant maintenant disp
 
 ## Bugs et suggestions
 Vous pouvez soumettre les bugs trouvés et vos suggestions sur le [tracker du projet](https://github.com/dvp-io/AnoCheat/issues).
-En cas de bug vous devez préciser:
-- La version du script
-- Le navigateur utilisé et sa version
-- Le système d'exploitation et sa version
-- Le moyen de reproduire le bug
-
-**Dans tous les cas vérifiez que vous disposez bien de la dernière version AVANT de signaler un bug**
-
-- [Accéder au tracker](https://github.com/dvp-io/AnoCheat/issues)
 
 ## Changelogs
 Vous pouvez voir les évolutions sur les changelogs. Les nouveautés du framework sont séparées du script.
@@ -81,14 +72,14 @@ Raccourcis clavier :
 
 Touches | Action 
 ---|---
-`Double-clic` + `CTRL` | Citer le message
-`Double-clic` + `Shift` | Alerter la modération (cite le message)
-`Double-clic` + `ALT` | Supprimer/Modérer le message
-`ALT` + `Flèche droite` | Afficher/Masquer la liste des membres
-`ALT` + `⬇` | Afficher/masquer la zone de saisie
+`CTRL` + `Double-clic` | Citer le message
+`SHIFT` + `Double-clic` | Alerter la modération (cite le message)
+`ALT` + `Double-clic` | Supprimer/Modérer le message
+`CTRL` + `→` | Afficher/Masquer la liste des membres
+`CTRL` + `↓` | Afficher/masquer la zone de saisie
 **Historique personnel** | _Vous devez avoir le focus dans la zone de saisie_
-`Shift` + `⬆` | Remonte l'historique personnel de la conversation en cours
-`Shift` + `⬇` | Descend l'historique personnel de la conversation en cours
+`ALT` + `↑` | Remonte l'historique personnel de la conversation en cours
+`ALT` + `↓` | Descend l'historique personnel de la conversation en cours
 
 Ergonomie :
 - Les onglets de conversation peuvent êtres réorganisés (Drag & Drop)
