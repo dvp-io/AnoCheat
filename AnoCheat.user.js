@@ -9,7 +9,13 @@
 // @include       http://chat.dvp.io/
 // @include       http://87.98.168.209
 // @include       http://87.98.168.209/
-// @version       2.4.0
+// @include       http://178.32.150.5
+// @include       http://178.32.150.5/
+// @include       http://5.196.237.44
+// @include       http://5.196.237.44/
+// @include       http://5.135.21.60
+// @include       http://5.135.21.60/
+// @version       2.4.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @website       http://dvp.io
@@ -127,7 +133,7 @@ AC_notify = function(type, msg) {
 
 // Notification browser
 AC_notifyBrowser = function(title, msg) {
-  GM_notification(title, msg);
+  GM_notification(title, msg, 'http://dvp.io/img/logo.png', function() {});
 }
 
 // Appel des API I/O
@@ -233,6 +239,7 @@ AC_logAdd = function(type, message) {
   plog.innerHTML = logTime + ' ';
   plog.appendChild(slog);
   dlog.insertBefore(plog, dlog.firstChild);
+  AC_notifyBrowser('[' + type + ']: ' + message, 'AnoCheat log');
 };
 
 if(LStorage()) {

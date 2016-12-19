@@ -1,5 +1,19 @@
 # Changelog AnoCheat
 
+## 2.4.1
+
+Général :
+
+- Prise en charges des proxy DVP I/O France, Pologne et Finlande
+
+Fonctionalités :
+
+- Les logs affichent maintenant une notification TamperMonkey
+
+Correctifs :
+
+- Le visuel des notifications TamperMonkey a été amélioré
+
 ## 2.4.0
 
 Fonctionalités :
