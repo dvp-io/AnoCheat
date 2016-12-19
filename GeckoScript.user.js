@@ -5,11 +5,17 @@
 // @description   Script ajoutant des fonctionalités à l'AnoChat, nécessite l'AnoCheat pour fonctionner
 // @include       http://chat.developpez.com
 // @include       http://chat.developpez.com/
-// @include       http://87.98.168.209
-// @include       http://87.98.168.209/
 // @include       http://chat.dvp.io
 // @include       http://chat.dvp.io/
-// @version       2.5.0
+// @include       http://87.98.168.209
+// @include       http://87.98.168.209/
+// @include       http://178.32.150.5
+// @include       http://178.32.150.5/
+// @include       http://5.196.237.44
+// @include       http://5.196.237.44/
+// @include       http://5.135.21.60
+// @include       http://5.135.21.60/
+// @version       2.5.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -17,14 +23,14 @@
 // @run-at        document-idle
 // ==/UserScript==
 
-if(AC_version !== '2.4.0') {
-  err = "Ce script ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour";
+if(AC_version !== '2.4.1') {
+  err = "GeckoScript ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour";
   alert(err);
   throw new Error(err);
 }
 
 if(version !== '3.0.3') {
-  err = "Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour";
+  err = "GeckoScript ne supporte pas la version actuelle du chat, veuillez mettre le script à jour";
   alert(err);
   throw new Error(err);
 }
@@ -172,19 +178,31 @@ document.addEventListener('keydown', function(e) {
   var charCode = e.which || e.keyCode;
   $roomID = $('.conversation:visible').attr('id');
 
-  if(e.altKey && charCode === 40) {
-    if($('#zoneSaisie').is(':visible')) { masquerBas(); } else { afficherBas(); }
+  if(e.ctrlKey && charCode === 40) {
+    if($('#zoneSaisie').is(':visible')) {
+      masquerBas();
+      AC_logAdd('notice', 'Zone de saisie masquée');
+    } else {
+      afficherBas();
+      AC_logAdd('notice', 'Zone de saisie affichée');
+    }
   }
 
-  if(e.altKey && charCode === 39) {
-    if($('#connectes').is(':visible')) { masquerDroite(); } else { afficherDroite(); }
+  if(e.ctrlKey && charCode === 39) {
+    if($('#connectes').is(':visible')) {
+      masquerDroite();
+      AC_logAdd('notice', 'Liste des membres masquée');
+    } else {
+      afficherDroite();
+      AC_logAdd('notice', 'Liste des membres affichée');
+    }
   }
 
-  if(e.shiftKey && charCode === 38 && $('#zoneSaisie').is(':focus')) {
+  if(e.altKey && charCode === 38 && $('#zoneSaisie').is(':focus')) {
     GS_getPrevMsg($roomID);
   }
 
-  if(e.shiftKey && charCode === 40 && $('#zoneSaisie').is(':focus')) {
+  if(e.altKey && charCode === 40 && $('#zoneSaisie').is(':focus')) {
     GS_getNextMsg($roomID);
   }
 
@@ -196,12 +214,13 @@ $("#zoneSaisie").preBind("keydown", function (e) {
   $zoneSaisieData = $(this).val();
   $roomID = $('.conversation:visible').attr('id');
 
-  // Clean le bbcode JOIN pour être compatible avec l'autocompletion
-  $(this).val($zoneSaisieData.replace(/\[join\](?:\s|)(.*)(?:\s|)\[\/join\]/i, GS_bbJoin));
-
   if(charCode === 13) {
 
     if($zoneSaisieData !== '') {
+      // Clean le bbcode JOIN pour être compatible avec l'autocompletion
+      $(this).val($zoneSaisieData.replace(/\[join\](?:\s|)(.*)(?:\s|)\[\/join\]/i, GS_bbJoin));
+
+      // On ajoute une entrée dans l'historique personnel
       GS_setBack($roomID, $zoneSaisieData);
     }
 

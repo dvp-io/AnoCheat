@@ -1,10 +1,23 @@
 # Changelog GeckoScript
 
+## 2.5.1
+
+Général :
+
+- Nouvelle version du Framework requise (2.4.1)
+- Prise en charges des proxy DVP I/O France, Pologne et Finlande
+
+Correctifs :
+
+- Désormais l'historique personnel fonctionne avec les touches `ALT + ↑` et `ALT + ↓`
+- Désormais la zone de saisie peut être masquée/affichée avec les touches `CTRL + ↓`
+- Désormais la liste des membres peut être masquée/affichée avec les touches `CTRL + →`
+
 ## 2.5.0
 
 Général :
 
-- Nouvelle version de Framework requise (2.4.0)
+- Nouvelle version du Framework requise (2.4.0)
 
 Fonctionalités :
 
@@ -20,12 +33,12 @@ Général :
 
 Général :
 
-- Nouvelle version de Framework requise (2.3.0)
+- Nouvelle version du Framework requise (2.3.0)
 
 Fonctionalités :
 
 - Ajout du style Magic Gecko, attention ça pique les yeux ! [Source](https://github.com/antoine-pous/magic-gecko/blob/master/magicGecko.css)
-- Désormais si le focus est dans la zone de saisie la combinaison `Shift + ⬆` ou `Shift + ⬇` permet de parcourir l'historique des messages envoyés [#2](https://github.com/dvp-io/AnoCheat/issues/2)
+- Désormais si le focus est dans la zone de saisie la combinaison `Shift + ↑` ou `Shift + ↓` permet de parcourir l'historique des messages envoyés [#2](https://github.com/dvp-io/AnoCheat/issues/2)
 - Désormais le BBCode JOIN est trim pour éviter de casser le lien vers le salon [Ticket 879](http://www.developpez.net/forums/issue.php?issueid=879)
 
 Correctifs :
