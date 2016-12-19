@@ -27,7 +27,7 @@
 
 // Test de la version du chat
 if(version !== '3.0.3') {
-  err = "Ce script ne supporte pas la version actuelle du chat, veuillez mettre le script à jour";
+  err = "AnoCheat ne supporte pas la version actuelle du chat, veuillez mettre le script à jour";
   alert(err);
   throw new Error(err);
 }
