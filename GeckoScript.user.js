@@ -178,7 +178,7 @@ document.addEventListener('keydown', function(e) {
   var charCode = e.which || e.keyCode;
   $roomID = $('.conversation:visible').attr('id');
 
-  if(e.ctrlKey && charCode === 40) {
+  if((e.ctrlKey || e.metaKey) && charCode === 40) {
     if($('#zoneSaisie').is(':visible')) {
       masquerBas();
       AC_logAdd('notice', 'Zone de saisie masquée');
@@ -188,7 +188,7 @@ document.addEventListener('keydown', function(e) {
     }
   }
 
-  if(e.ctrlKey && charCode === 39) {
+  if((e.ctrlKey || e.metaKey) && charCode === 39) {
     if($('#connectes').is(':visible')) {
       masquerDroite();
       AC_logAdd('notice', 'Liste des membres masquée');
