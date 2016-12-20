@@ -136,7 +136,7 @@ AC_notifyBrowser = function(title, msg, callback) {
   if(typeof callback === "function") {
     GM_notification(title, msg, 'http://dvp.io/img/logo.png', callback);
   } else {
-    GM_notification(title, msg, 'http://dvp.io/img/logo.png', function() {});
+    GM_notification(title, msg, 'http://dvp.io/img/logo.png');
   }
 }
 
