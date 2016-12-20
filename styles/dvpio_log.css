@@ -9,7 +9,7 @@
   width: 75%;
   overflow: scroll;
   overflow-x: hidden;
-  align: left;
+  text-align: left;
   padding: 2px 0;
   border-right: 1px solid #ACBFCB;
   background-color: snow;
