@@ -132,8 +132,12 @@ AC_notify = function(type, msg) {
 }
 
 // Notification browser
-AC_notifyBrowser = function(title, msg) {
-  GM_notification(title, msg, 'http://dvp.io/img/logo.png', function() {});
+AC_notifyBrowser = function(title, msg, callback) {
+  if(typeof callback === "function") {
+    GM_notification(title, msg, 'http://dvp.io/img/logo.png', callback);
+  } else {
+    GM_notification(title, msg, 'http://dvp.io/img/logo.png', function() {});
+  }
 }
 
 // Appel des API I/O
