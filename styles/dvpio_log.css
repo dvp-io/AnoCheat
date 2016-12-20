@@ -21,26 +21,26 @@
   line-height: 16px;
 }
 
-#dvpio_log div span {
+#dvpio_log div > span {
   padding-left: 20px;
 }
 
-#dvpio_log div.error span {
+#dvpio_log div.error > span {
   color: red;
   background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/error.png) no-repeat;
 }
 
-#dvpio_log div.warning span {
+#dvpio_log div.warning > span {
   color: orange;
   background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/warn.png) no-repeat;
 }
 
-#dvpio_log div.notice span {
+#dvpio_log div.notice > span {
   background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/info.png) no-repeat;
   color: #0074cd;
 }
 
-#dvpio_log div.success span {
+#dvpio_log div.success > span {
   background: url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/success.png) no-repeat;
   color: green;
 }
