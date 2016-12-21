@@ -75,6 +75,7 @@ Touches | Action
 `CTRL` + `Double-clic` | Citer le message
 `SHIFT` + `Double-clic` | Alerter la modération (cite le message)
 `ALT` + `Double-clic` | Supprimer/Modérer le message
+**Interface utilisateur** |
 `CTRL` + `→` | Afficher/Masquer la liste des membres
 `CTRL` + `↓` | Afficher/masquer la zone de saisie
 **Historique personnel** | _Vous devez avoir le focus dans la zone de saisie_
