@@ -1,5 +1,17 @@
 # Changelog AnoCheat
 
+## 2.4.2
+
+Fonctionalités :
+
+- Ajout du prototype `String.prototype.startWith` si il n'existe pas [Source Gist](https://gist.github.com/antoine-pous/cad6cc97a500666fbffe43359abb7454)
+
+Correctifs :
+
+- Correction de la typo des notifications des logs
+- Correction de la méthode `AC_notifyBrowser`
+
+
 ## 2.4.1
 
 Général :
@@ -18,7 +30,7 @@ Correctifs :
 
 Fonctionalités :
 
-- Ajout de la méthode `str.hash` si elle n'existe pas
+- Ajout du prototype `String.prototype.hash` si il n'existe pas
 - Support des notifications système via la méthode `AC_notifyBrowser`
 
 ## 2.3.1 (version spéciale FireFox uniquement)
@@ -31,7 +43,7 @@ Général :
 
 Fonctionalités :
 
-- Ajout de la méthode `str.trim()` si elle n'existe pas [Source MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/trim)
+- Ajout du prototype `String.prototype.trim` si il n'existe pas [Source MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/trim)
 - Ajout de la méthode `$.preBind` pour permettre de bind des events avant celles du chat
 
 ## 2.2.2
