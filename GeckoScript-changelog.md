@@ -1,5 +1,16 @@
 # Changelog GeckoScript
 
+## 2.6.0
+
+Général :
+
+- Nouvelle version du Framework requise (2.4.2)
+
+Fonctionalités :
+
+- Les alertes sont maintenant notifiées
+- Désormais quand vous recevez un nouveau MP vous êtes notifié
+
 ## 2.5.1
 
 Général :

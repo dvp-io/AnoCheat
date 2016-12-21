@@ -15,7 +15,7 @@
 // @include       http://5.196.237.44/
 // @include       http://5.135.21.60
 // @include       http://5.135.21.60/
-// @version       2.5.1
+// @version       2.6.0
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -23,7 +23,7 @@
 // @run-at        document-idle
 // ==/UserScript==
 
-if(AC_version !== '2.4.1') {
+if(AC_version !== '2.4.2') {
   err = "GeckoScript ne supporte pas la version actuelle de l'AnoCheat, veuillez mettre le framework et le script à jour";
   alert(err);
   throw new Error(err);
@@ -164,6 +164,51 @@ document.querySelector('#conversations').addEventListener('dblclick', function(e
     }
 
   }
+});
+
+// on écoute les réponses AJAX
+$(document).ajaxComplete(function(event, xhr, settings){
+
+  if(settings.url == 'ajax.php') {
+
+    var data = $.parseJSON(xhr.responseText);
+
+    // Si on est sur un MP
+    if(data.pvs.length > 0) {
+
+      $.each(data.pvs, function(i, pm) {
+
+        var $html = $(pm.html);
+        var msg = $html.find('span.contenu').text();
+        var tab = '#onglet' + pm.id;
+
+        if(pm.id === '-1') {
+
+          if(pm.html.match(/(\[Alerte aux modérateurs\])/gi)) {
+            AC_notifyBrowser('Alerte modération', msg, function(tab) {
+              $(tab).click();
+            });
+          } else if(!msg.startWith('[' + pseudo + ']')) {
+            AC_notifyBrowser('Modération', msg, function(tab) {
+              $(tab).click();
+            });
+          }
+
+        } else {
+
+          if(!msg.startWith('[' + pseudo + ']')) {
+            AC_notifyBrowser('MP ' + pm.pseudo, msg, function(tab) {
+              $(tab).click();
+            });
+          }
+        }
+
+      });
+
+    }
+
+  }
+
 });
 
 // On écoute la modification du DOM
