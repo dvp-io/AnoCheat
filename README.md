@@ -84,6 +84,7 @@ Touches | Action
 Ergonomie :
 - Les onglets de conversation peuvent êtres réorganisés (Drag & Drop)
 - Un sélecteur de thème vous permet changer le rendu visuel du chat
+- Les MP vous sont notifiés via l'API de l'OS (fournis par TamperMonkey)
 
 ## Fonctionalités retirées
 
