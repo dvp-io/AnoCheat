@@ -15,7 +15,7 @@
 // @include       http://5.196.237.44/
 // @include       http://5.135.21.60
 // @include       http://5.135.21.60/
-// @version       2.6.1
+// @version       2.6.2
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -201,6 +201,32 @@ $(document).ajaxComplete(function(event, xhr, settings){
               $(tab).click();
             });
           }
+        }
+
+      });
+
+    }
+
+    if(data.salon.length > 0) {
+
+      $.each($(data.salon), function(i, div) {
+
+        var msg = $(div).find('span.contenu').text();
+        var not = $(div).find('span.notice').text();
+        var ind = $(div).find('span.indicateur').text();
+
+        if(not === "Notice reçue :") {
+          AC_notifyBrowser('Notice reçue', msg, function(tab) {
+            $("#onglet0").click();
+          });
+        } else if(ind === "◆") {
+          AC_notifyBrowser('HL reçu', msg, function(tab) {
+            $("#onglet0").click();
+          });
+        } else if(ind === "◈") {
+          AC_notifyBrowser('Réponse reçue', msg, function(tab) {
+            $("#onglet0").click();
+          });
         }
 
       });

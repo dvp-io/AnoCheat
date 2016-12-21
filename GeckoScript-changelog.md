@@ -1,5 +1,13 @@
 # Changelog GeckoScript
 
+## 2.6.2
+
+Fonctionalités :
+
+- Les notices reçues sont maintenant notifiées
+- Les réponses reçues sont maintenant notifiées
+- Les mentions reçues sont maintenant notifiées
+
 ## 2.6.1
 
 Correctifs :
