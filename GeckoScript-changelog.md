@@ -1,5 +1,11 @@
 # Changelog GeckoScript
 
+## 2.6.1
+
+Correctifs :
+
+- Correction d'un bug apparu lors de l'évènement de noël empêchant la détection de l'expéditeur
+
 ## 2.6.0
 
 Général :

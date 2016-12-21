@@ -15,7 +15,7 @@
 // @include       http://5.196.237.44/
 // @include       http://5.135.21.60
 // @include       http://5.135.21.60/
-// @version       2.6.0
+// @version       2.6.1
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/GeckoScript.user.js
 // @website       http://dvp.io
@@ -188,7 +188,7 @@ $(document).ajaxComplete(function(event, xhr, settings){
             AC_notifyBrowser('Alerte modération', msg, function(tab) {
               $(tab).click();
             });
-          } else if(!msg.startWith('[' + pseudo + ']')) {
+          } else if(!msg.startWith('[' + pseudo + ']') && !msg.startWith('[ ' + pseudo + ']') && !msg.startWith('[' + pseudo + ' ]')) {
             AC_notifyBrowser('Modération', msg, function(tab) {
               $(tab).click();
             });
