@@ -196,7 +196,7 @@ $(document).ajaxComplete(function(event, xhr, settings){
 
         } else {
 
-          if(!msg.startWith('[' + pseudo + ']')) {
+          if(!msg.startWith('[' + pseudo + ']') && !msg.startWith('[ ' + pseudo + ']') && !msg.startWith('[' + pseudo + ' ]')) {
             AC_notifyBrowser('MP ' + pm.pseudo, msg, function(tab) {
               $(tab).click();
             });
