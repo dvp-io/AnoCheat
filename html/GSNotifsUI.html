@@ -1,0 +1,71 @@
+<div id="GSNotifsUI" style="height: 247px;width: auto;min-height: 0px;" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0">
+  <p>
+    Bienvenue dans le centre de notifications.
+    <br />
+    Ici vous pouvez gérer de manière avancée les notifications du chat.
+    <br /><br />
+    <i><a href="https://github.com/dvp-io/AnoCheat/issues" title="Accéder au tracker">Si vous rencontrez un bug ou pour toute suggestion ouvrez un ticket sur le tracker du projet, merci !</a></i>
+  </p>
+
+  <p>
+  Type de notification à configurer :
+  <select>
+    <option selected disabled>-- Faites un choix --</option>
+    <optgroup label="Système">
+      <option value="sysAlert">Alerte</option>
+      <option value="sysWarn">Avertissement reçu</option>
+    </optgroup>
+    <optgroup label="Messages">
+      <option value="msgPrivate">MP reçu</option>
+      <option value="msgHL">HL reçu</option>
+      <option value="msgNotice">Notice reçue</option>
+      <option value="msgAnswer">Réponse reçue</option>
+    </optgroup>
+    <optgroup label="Autres utilisateurs">
+      <option value="userDice">Dice</option>
+      <option value="userConn">Connexion</option>
+      <option value="userDice">Déconnexion</option>
+      <option value="userDice">Reconnexion</option>
+      <option value="userDice">Connexion perdue</option>
+      <option value="userDice">Entre dans le salon</option>
+      <option value="userDice">Sort du salon</option>
+    </optgroup>
+    <optgroup label="Logs des scripts" disabled>
+      <option value="logSuccess">Success</option>
+      <option value="logNotice">Info</option>
+      <option value="logSuccess">Warning</option>
+      <option value="logError">Error</option>
+    </optgroup>
+  </select>
+  </p>
+  <fieldset>
+    <legend>Configuration des notification : <b>Dice</b></legend>
+    <p>
+      <input type="checkbox" checked> Notification système<br />
+      <i><small>Active les notifications système, ces notifications permettent d'être notifié même quand un autre logiciel est au premier plan.</small></i>
+    </p>
+    <p>
+      Titre personnalisé <input type="text"><br />
+      <i><small>Le titre personnalisé vous permet de rendre la notification plus discrète.</small></i>
+    </p>
+    <p>
+      Message personnalisé <input type="text"><br />
+      <i><small>Le message personnalisé vous permet de rendre la notification plus discrète.</small></i>
+    </p>
+    <p>
+      Image personnalisée (url ou base64) <input type="text"><br />
+      <i><small>L'image personnalisée vous permet de rendre la notification plus discrète. Si vous êtes derrière un proxy, privilégiez l'utilisation du base64 du fichier.</small></i>
+    </p>
+    <p>
+      <input type="checkbox" checked> Masquer la notification dans le salon<br />
+      <i><small>Cette option permet de masquer la notification (texte italique, bleu) directement dans le salon, ne fonctionne pas pour les notifications du groupe système.</small></i>
+    </p>
+    <p>
+      Notification sonore (url ou base64): <input type="text"><br />
+      <i><small>Permet de jouer un son lors de la notification, il est recommandé d'éviter les fichiers trop lourds. Si vous êtes derrière un proxy, privilégiez l'utilisation du base64 du fichier.</small></i>
+    </p>
+    <div style="text-align:center;">
+      <button id="GSNotifsTest">Tester</button> <button id="GSNotifsSave">Enregistrer</button>
+    </div>
+  </fieldset>
+</div>
