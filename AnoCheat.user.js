@@ -135,11 +135,16 @@ AC_notify = function(type, msg) {
 }
 
 // Notification browser
-AC_notifyBrowser = function(title, msg, callback) {
+AC_notifyBrowser = function(d, callback) {
+
+  if(!d.img) {
+    d.img = 'http://dvp.io/img/logo.png'
+  }
+
   if(typeof callback === "function") {
-    GM_notification(msg, title, 'http://dvp.io/img/logo.png', callback);
+    GM_notification(d.msg, d.title, d.img, callback);
   } else {
-    GM_notification(msg, title, 'http://dvp.io/img/logo.png');
+    GM_notification(d.msg, d.title, d.img);
   }
 }
 
@@ -246,7 +251,7 @@ AC_logAdd = function(type, message) {
   plog.innerHTML = logTime + ' ';
   plog.appendChild(slog);
   dlog.insertBefore(plog, dlog.firstChild);
-  AC_notifyBrowser('AnoCheat log - ' + type, message);
+  AC_notifyBrowser({"title":"AnoCheat log - " + type, "msg": message});
 };
 
 if(LStorage()) {
@@ -326,6 +331,12 @@ dvpioBtn.addEventListener('click', function(e) {
   dvpioMenu.style.display = 'none';
 });
 
+// Incrémente le compteur de notif du menu
+AC_menuCount = function(t) {};
+
+// Joue un son
+AC_playSound = function(name) {};
+
 // Menu pour afficher/masquer les logs
 AC_menuAdd('Afficher les logs', "Permet de visualiser les logs relatifs à l'AnoCheat et aux modules", function() {
   if(dvpio_log.style.display === "none") {
@@ -344,7 +355,7 @@ AC_menuAdd('Sources du projet', "N'hésitez pas à participer!", function() {
 
 // Lien vers le tracker
 AC_menuAdd('Signaler un bug, faire une suggestion', "N'hésitez pas à signaler les bug ou proposer vos idées d'amélioration ;)", function() {
-  window.open('https://github.com/dvp-io/AnoCheat#bugs-et-suggestions', '_blank');
+  window.open('https://github.com/dvp-io/AnoCheat/issues', '_blank');
 });
 
 // Injection du menu
