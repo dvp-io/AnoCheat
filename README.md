@@ -39,8 +39,10 @@ Vous devez installer le framework (AnoCheat) AVANT le script (GeckoScript) et vo
 **Attention !**
 La version dédié à Firefox n'existe plus, TamperMonkey étant maintenant disponible vous pouvez utiliser la version classique de l'AnoCheat et du GeckoScript
 
-1. [Installer le framework](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
-2. [Installer le script](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
+1. [Installer l'AnoCheat](https://github.com/dvp-io/AnoCheat/raw/master/AnoCheat.user.js)
+2. [Installer le GeckoScript](https://github.com/dvp-io/AnoCheat/raw/master/GeckoScript.user.js)
+
+**/!\ Une fois le Framework et le script installés vous devez rafraichir la page de chat pour qu'ils soient executés /!\**
 
 ## Bugs et suggestions
 Vous pouvez soumettre les bugs trouvés et vos suggestions sur le [tracker du projet](https://github.com/dvp-io/AnoCheat/issues).
