@@ -59,6 +59,7 @@ $('<select />').attr('id','dvpio_style').insertBefore('#selecteurCouleur').on('c
   var modeC = optionsChat.indexOf('C') > -1 ? ' compact ' : ' ';
   var cls = this.value === '-1' ? 'fondblanc' + modeC : modeC + this.value;
   $('body').attr('class', cls);
+  focusZoneSaisie();
   AC_logAdd('notice', 'Style `' + this.options[this.selectedIndex].text + '` sélectionné');
 });
 
