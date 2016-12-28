@@ -233,6 +233,28 @@ dlog.id = 'dvpio_log';
 dlog.style.display = 'none';
 document.body.appendChild(dlog);
 
+
+// Menu pour afficher/masquer les logs
+AC_menuAdd('Afficher les logs', "Permet de visualiser les logs relatifs à l'AnoCheat et aux modules", function() {
+  if(dvpio_log.style.display === "none") {
+    this.innerHTML = 'Masquer les logs';
+    dvpio_log.style.display = 'block';
+    return;
+  }
+  this.innerHTML = 'Afficher les logs';
+  dvpio_log.style.display = 'none';
+});
+
+// Lien vers le projet
+AC_menuAdd('Sources du projet', "N'hésitez pas à participer!", function() {
+  window.open('https://github.com/dvp-io/AnoCheat/blob/master/README.md', '_blank');
+});
+
+// Lien vers le tracker
+AC_menuAdd('Signaler un bug, faire une suggestion', "N'hésitez pas à signaler les bug ou proposer vos idées d'amélioration ;)", function() {
+  window.open('https://github.com/dvp-io/AnoCheat/issues', '_blank');
+});
+
 // Ajout du CSS pour div#dvpio_log et div#dvpio_log p
 AC_cssAdd('#dvpio_log,#dvpio_log div:not(:last-child){border-bottom:1px solid #ACBFCB}#dvpio_log{position:absolute;left:0;top:37px;width:75%;overflow:scroll;overflow-x:hidden;text-align:left;padding:2px 0;border-right:1px solid #ACBFCB;background-color:snow;height:98px}#dvpio_log div{margin:0;line-height:16px}#dvpio_log div>span{padding-left:20px}#dvpio_log div.error>span{color:red;background:url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/error.png) no-repeat}#dvpio_log div.warning>span{color:orange;background:url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/warn.png) no-repeat}#dvpio_log div.notice>span{background:url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/info.png) no-repeat;color:#0074cd}#dvpio_log div.success>span{background:url(https://raw.githubusercontent.com/dvp-io/AnoCheat/master/styles/img/success.png) no-repeat;color:green}');
 
@@ -292,6 +314,15 @@ if(LStorage()) {
   }
 }
 
+// Réinitialise une interface
+AC_UIReset = function(UIname) {
+
+  if(!UIname)
+    AC_logAdd('error', 'AC_UIReset paramètre manquant');
+
+  $(UIname)[0].reset();
+};
+
 /* Ajoute un bouton
  * @param name string Nom du menu
  * @param callback function Callback appelé au clic sur le bouton
@@ -337,29 +368,66 @@ dvpioBtn.addEventListener('click', function(e) {
 // Incrémente le compteur de notif du menu
 AC_menuCount = function(t) {};
 
-// Joue un son
-AC_playSound = function(name) {};
+// Lib des sons chargés
+AC_soundLibrary = {};
 
-// Menu pour afficher/masquer les logs
-AC_menuAdd('Afficher les logs', "Permet de visualiser les logs relatifs à l'AnoCheat et aux modules", function() {
-  if(dvpio_log.style.display === "none") {
-    this.innerHTML = 'Masquer les logs';
-    dvpio_log.style.display = 'block';
-    return;
+// Déclare un nouveau son
+AC_soundRegister = function(name, sound) {
+  var snd = AC_configRead('ACSounds') || {};
+  if(!name) {
+    AC_logAdd('error', 'Vous devez indiquer un nom pour votre son !');
+  } else if(!sound) {
+    AC_logAdd('error', 'Vous devez indiquer un fichier son distant ou base64 !');
+  } else if(snd[name]) {
+    AC_logAdd('error', 'Le son `' + name + '` existe déjà !');
+  } else {
+    snd[name] = sound;
+    AC_configWrite('ACSounds', snd);
+    AC_logAdd('success', 'Le son `' + name + '` a bien été ajouté !');
+    AC_soundLoad(name);
   }
-  this.innerHTML = 'Afficher les logs';
-  dvpio_log.style.display = 'none';
-});
+};
 
-// Lien vers le projet
-AC_menuAdd('Sources du projet', "N'hésitez pas à participer!", function() {
-  window.open('https://github.com/dvp-io/AnoCheat/blob/master/README.md', '_blank');
-});
+AC_soundDelete = function(name) {name
+  if(name === "Beep" || name === "Facebook")
+    return;
+  var snd = AC_configRead('ACSounds') || {};
+  delete snd[name];
+  delete AC_soundLibrary[name];
+  AC_configWrite('ACSounds', snd);
+}
 
-// Lien vers le tracker
-AC_menuAdd('Signaler un bug, faire une suggestion', "N'hésitez pas à signaler les bug ou proposer vos idées d'amélioration ;)", function() {
-  window.open('https://github.com/dvp-io/AnoCheat/issues', '_blank');
-});
+AC_soundLoad = function(name) {
+  var snd = AC_configRead('ACSounds');
+  if(name) {
+    AC_soundLibrary[name] = new Audio(snd[name]);
+  } else {
+    $.each(snd, function(name, snd) {
+      AC_soundLoad(name);
+    });
+  }
+}
+
+// Joue un son
+AC_soundPlay = function(name){
+  AC_soundLibrary[name || "Beep"].play();
+};
+
+// Enregistrement des sons par défaut
+AC_soundRegister('Beep', 'data:audio/mp3;base64,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');
+AC_soundRegister('Facebook', 'data:audio/mp3;base64,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YmFUTBVFgsJskCFTeFAkkNBYsJKwUOmhRcfOd1Fiw2cKhYoUSV3yxYWkxBTUUzLjkyIChhbHBoYSlVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMuOTIgKGFscGhhKVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVX/+pIAxIrmj/NjUMGDDBrybiWYMGHjTEAAAaQAAAAAAAA0gAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV');
+
+// Chargement des sons connus
+AC_soundLoad();
+
+AC_logAdd('success', Object.keys(AC_soundLibrary).length + ' fichiers sons chargés');
+
+$('body').append('<div id="ACUISM" style="height:247px;width:auto;min-height:0" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0"><img src="/smileys/14405-e714.jpg" width="50" height="50" data-image="P" style="float:right"><p> Bienvenue dans le gestionnaire de sons. <br /><br /><i><a href="https://github.com/dvp-io/AnoCheat/issues" title="Accéder au tracker" target="_blank">Si vous rencontrez un bug ou pour toute suggestion ouvrez un ticket sur le tracker du projet, merci !</a></i></p><form id="ACUISMForm"><p> Liste des sons existants : <select id="ACUISMList" name="type"></select><span class="groupeBoutons"><button id="ACUISMPlay" title="Ecouter ce son" type="button" class="bouton boutonalt">▶</button><button id="ACUISMDelete" title="Supprimer ce son" type="button" class="bouton boutonalt">☠</button></span></p><fieldset><legend>Ajouter un son</legend><i>Vous pouvez ajouter des sons en indiquant l\'url du fichier ou en mettant le fichier encodé en base64, dans le dernier cas n\'oubliez pas d\'indiquer l\'entête</i><p> Nom du son : <input type="text" name="name"><br /></p><p> Fichier : <input type="text" name="snd"><br /></p><button id="ACUISMSave" class="bouton boutonalt" type="button">Enregistrer</button></fieldset></form></div>');
+$('#ACUISM').dialog({ autoOpen: false, open: function() { AC_UIReset("#ACUISMForm"); $("#ACUISMList").find('option').remove();  $.each(AC_soundLibrary, function(name, obj) {  $('#ACUISMList').append($('<option />').text(name).attr('value', name)); });}, title: "Gestionnaire de sons", resizable: false, width: 707, height: 590});
+AC_menuAdd('Gestionnaire de sons', 'Gérez facilement les sons utilisés sur le chat', function() { $('#ACUISM').dialog("open"); });
+$("#ACUISMPlay").on('click', function() { var name = $("#ACUISMList").val(); AC_soundLibrary[name].play(); });
+$("#ACUISMDelete").on('click', function() { var name = $("#ACUISMList").val(); if(name != "Beep" && name != "Facebook") { AC_soundDelete(name); $("#ACUISMList").find('option:selected').remove(); } else { AC_logAdd('error', 'Vous ne pouvez pas supprimer les sons par défaut'); } });
+$("#ACUISMSave").on('click', function() { AC_soundRegister($('#ACUISMForm input[name="name"]').val(), $('#ACUISMForm input[name="snd"]').val()); AC_UIReset("#ACUISMForm"); $("#ACUISMList").find('option').remove();  $.each(AC_soundLibrary, function(name, obj) {  $('#ACUISMList').append($('<option />').text(name).attr('value', name)); }); });
 
 // Injection du menu
 colorPicker.parentNode.insertBefore(dvpioMenu, colorPicker);
