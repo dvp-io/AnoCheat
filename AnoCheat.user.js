@@ -15,7 +15,7 @@
 // @include       http://5.196.237.44/
 // @include       http://5.135.21.60
 // @include       http://5.135.21.60/
-// @version       2.4.2
+// @version       2.5.0
 // @downloadURL   https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @updateURL     https://raw.githubusercontent.com/dvp-io/AnoCheat/master/AnoCheat.user.js
 // @website       http://dvp.io

@@ -1,5 +1,19 @@
 # Changelog AnoCheat
 
+
+
+## 2.5.0
+
+Fonctionalités :
+
+- Ajout de la fonction `$.fn.serializeJSON`
+- Ajout du gestionnaire de sons, vous pouvez maintenant stocker des sons utilisables sur le chat
+
+Correctifs :
+
+- Clarification du README concernant l'installation #4
+
+
 ## 2.4.2
 
 Fonctionalités :
@@ -10,7 +24,6 @@ Correctifs :
 
 - Correction de la typo des notifications des logs
 - Correction de la méthode `AC_notifyBrowser`
-
 
 ## 2.4.1
 
