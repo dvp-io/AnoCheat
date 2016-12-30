@@ -260,7 +260,7 @@ document.addEventListener('keydown', function(e) {
     }
   }
 
-  if((e.ctrlKey || e.metaKey) && charCode === 39) {
+  if(e.altKey && charCode === 39) {
     if($('#connectes').is(':visible')) {
       masquerDroite();
       AC_logAdd('notice', 'Liste des membres masquée');
