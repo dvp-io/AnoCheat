@@ -234,6 +234,12 @@ $(document).ajaxComplete(function(event, xhr, settings){
 
     }
 
+    if(data.connectes.length > 0) {
+
+      $("#geckolor").val(couleurInitiale);
+
+    }
+
   }
 
 });
