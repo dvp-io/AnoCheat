@@ -35,6 +35,8 @@ if(version !== '3.0.3') {
   throw new Error(err);
 }
 
+GS_version = GM_info.script.version;
+
 // Ajout de l'entrée du log pour le chargement du script
 AC_logAdd('success',"GeckoScript v" + GM_info.script.version + " chargé");
 
