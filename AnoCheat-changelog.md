@@ -1,6 +1,14 @@
 # Changelog AnoCheat
 
+## 2.5.1
 
+Fonctionalités :
+
+- Ajout de 3 sons
+
+Correctifs :
+
+- Correction du flood de notification au lancement
 
 ## 2.5.0
 
