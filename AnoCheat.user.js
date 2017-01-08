@@ -276,7 +276,7 @@ AC_logAdd = function(type, message) {
   plog.innerHTML = logTime + ' ';
   plog.appendChild(slog);
   dlog.insertBefore(plog, dlog.firstChild);
-  AC_notifyBrowser({"title":"AnoCheat log - " + type, "msg": message});
+  //AC_notifyBrowser({"title":"AnoCheat log - " + type, "msg": message});
 };
 
 if(LStorage()) {
