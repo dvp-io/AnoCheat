@@ -89,6 +89,24 @@ Ergonomie :
 - Un sélecteur de thème vous permet changer le rendu visuel du chat
 - Les MP, notices, réponses et mentions sont notifiés via l'API de l'OS (fournis par TamperMonkey)
 
+### Centre de notifications
+
+Le centre de notifications vous permet de gérer de manière avancée et intuitive toutes les notifications
+du chat. Les notifications sont à activer et configurer manuellement via l'interface graphique.
+
+![](https://raw.githubusercontent.com/dvp-io/AnoCheat/master/.github/screenshots/notifs-3.png)](https://raw.githubusercontent.com/dvp-io/AnoCheat/master/.github/screenshots/notifs-3.png)
+
+Par défaut les notifications utilisent le logo de DVP I/O et les informations relatives à la notification.
+
+![](https://raw.githubusercontent.com/dvp-io/AnoCheat/master/.github/screenshots/notifs-1.png)](https://raw.githubusercontent.com/dvp-io/AnoCheat/master/.github/screenshots/notifs-1.png)
+
+Pour plus de discrétion vous pouvez customiser l'image, le titre et le contenu de la notification
+
+![](https://raw.githubusercontent.com/dvp-io/AnoCheat/master/.github/screenshots/notifs-2.png)](https://raw.githubusercontent.com/dvp-io/AnoCheat/master/.github/screenshots/notifs-2.png)
+
+**Afin d'éviter tout problème lors du clic, la notification ne redirige pas vers l'onglet du chat, une option sera prochainement disponible.**
+
+
 ## Fonctionalités retirées
 
 - Bouton d'upload : Implémenté depuis la version 3.0.2 du chat
