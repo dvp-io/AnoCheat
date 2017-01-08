@@ -1,5 +1,23 @@
 # Changelog GeckoScript
 
+## 2.7.0
+
+Général :
+
+- Nouvelle version du framework requise (2.5.1)
+
+Fonctionalités :
+
+- Une interface de configuration est disponible pour le centre de notifications
+- Les notifications visuelles peuvent être personnalisées pour êtres plus discrètes, ou pas
+- Les notifications sonores sont disponibles, pour ajouter des sons utilisez le gestionnaire de sons
+
+Correctifs :
+
+- Désormais après avoir choisis un thème le focus est replacé sur la zone de saisie #7
+- Le color picker natif affiche maintenant la bonne couleur dès la connexion au chat #8
+- Correction du conflit entre les racourcis du chat et du script #5
+
 ## 2.6.2
 
 Fonctionalités :
