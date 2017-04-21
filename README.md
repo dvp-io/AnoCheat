@@ -60,6 +60,9 @@ Certains d'entre vous rencontrent des problèmes pour se connecter depuis leur p
 - [http://87.98.168.209](http://87.98.168.209) - Developpez France
 
 ### Adresses fournies par DVP I/O
+
+**NB:** Depuis le passage de l'intégralité des services DVP I/O sous SSL les proxy pour le chat sont hors ligne. Prévenez moi le jour où le chat passe sous SSL.
+
 - [http://chat.dvp.io](http://chat.dvp.io)
 - [http://178.32.150.5](http://178.32.150.5) - DVP I/O Pologne
 - [http://5.196.237.44](http://5.196.237.44) - DVP I/O France
